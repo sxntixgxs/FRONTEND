@@ -10,7 +10,7 @@
 <body>
     <h1>Atributos Inputt</h1>
     <hr>
-    <form action="" method="get">
+    <form action="https://www.google.com/search" method="get">
         <label for="fnombres">Album's Name</label>
         <input type="text" name="fnombres" id="fnombres" placeholder="Enter the name···" size="15" list="Albums"
             value="Yeezus">
@@ -22,11 +22,7 @@
         <br><br>
         <label for="pass">Password</label>
         <input type="password" name="pass" id="pass">
-        <br><br>
-        <input type="submit" value="Send">
-        <input type="reset" value="clean">
-        <br>
-        Choose your fav album<br>
+        <br><br>Choose your fav album<br>
         <input type="radio" id="MDTF" name="fav_albm" value="MDTF">
         <label for="MDTF">MDTF</label><br>
         <input type="radio" id="The life of Pablo" name="fav_albm" value="The life of Pablo" checked><!---El checked lo deja seleccionado por defecto de primero!!!!!!-->
@@ -35,6 +31,60 @@
         <label for="Yeezus">Yeezus</label><br>
         <input type="radio" id="Graduation" name="fav_albm" value="Graduation">
         <label for="Graduation">Graduation</label><br>
+        <br><br>
+        Hobbies<br>
+        <input type="checkbox" name="pasatiempos" id="leer">
+        <label for="leer">Leer</label><br>
+        <input type="checkbox" name="pasatiempos" id="Cine">
+        <label for="Cine">Cine</label><br>
+        <input type="checkbox" name="pasatiempos" id="Gym" checked>
+        <label for="Gym">Gym</label><br>
+        <input type="checkbox" name="pasatiempos" id="Comer">
+        <label for="Comer">Comer</label><br>
+        <br><br>
+        <input type="button" value="Ver mensaje" onclick="alert('DOMADO GORDO')">
+        <label for="colorfav">Escoja un color: </label>
+        <input type="color" id="colorfav">
+        <br><br>
+        <label for="datemax">Ingrese una fecha anterior a 2014/04/05 </label>
+        <input type="date" name="datemax" id="datemax" max="2014-04-04">
+        <br><br>
+        <br><br>
+        <label for="datemin">Ingrese una fecha posterior a 2020/01/01 </label>
+        <input type="date" name="datemin" id="datemin" min="2020-01-02">
+        <br><br>
+        <br><br>
+        <label for="fecnac">Fecha y hora de nacimiento: </label>
+        <input type="datetime-local" name="fecnac" id="fechanac">
+        <br><br>
+        <br><br>
+        <label for="email">Ingrese su email</label>
+        <input type="email" name="iema" id="iema" required>
+        <br><br>
+        <br><br>
+        <input type="image" src="card.png" alt="CreditCard" width="2.5%" onclick="alert('Declined')">
+        <br><br>
+        <label for="archivo">Escoja un archivo</label>
+        <input type="file" name="archivo" id="archivo" accept=".png,.jpg,.gif">
+        <br><br>
+        <label for="mesnac">Mes nacimiento: </label>
+        <input type="month" name="mesnac" id="mesnac">
+        <br><br>
+        <label for="edad">Edad</label>
+        <input type="number" name="edad" id="edad" min="18" max="50" step="2" value="18"><br><br>
+        <label for="vol">Volumen</label>
+        <input type="range" name="vol" id="vol" max="50" step="10">
+        <br><br>
+        <label for="busqueda">Buscar en google:</label>
+        <input type="search" name="q" id="busqueda">
+        <br><br>
+        <label for="comentario">Escriba sus comentairos</label>
+        input:text
+        <br><br>
+        <input type="submit" value="Send">
+        <input type="reset" value="clean">
+        <input type="hidden" name="estadoForm" value="completo">
+        <br>
     </form>
 </body>
 

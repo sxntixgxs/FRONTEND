@@ -21,6 +21,17 @@ input
         submit
         password
         reset
+        button
+        date
+        datetime-local
+        color
+        email
+        file
+        hidden
+        month       
+        NUMBER
+        range
+        search
     >> Mas atributos
         list
         size
