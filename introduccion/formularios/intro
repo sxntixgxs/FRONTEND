@@ -23,6 +23,8 @@ input
         list
         size
         maxlength
+        readonly / no se puede editar
+        value / es el valor por defekto
         ...
 label
     define una etiqueta para muchos elementos del FORMULARIOS
