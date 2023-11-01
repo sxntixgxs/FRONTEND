@@ -1,0 +1,33 @@
+<form action="mipaginaweb.com" method="POST">
+    <!--La entrada de cualquier tipo y áreas de texto entra aquí-->
+</form>
+GET Y POST 
+    GET 
+        designado para obtener informacion
+        tamaño maximo 255 caracteres
+        queda guardado en el historial del browser
+    POST
+        designado para enviar informacion ; no es visible
+        no tiene un length maximo
+        no queda guardado en el browserR
+TIPOS DE EENTRADA DE FORMULARIOS HTML
+input
+    placeholder atributo que ayuda al usuario a comprender el proposiyto del input; seria como lo que va en gris
+    20 tipos de inputs
+    >>
+        text=linea de texto simple
+        radio=boton circular donde se elige una de varias opciones
+        checkbox=desplays a checkbox; se puede seleccionar 0 o más opciones
+        submit
+    >> Mas atributos
+        list
+        size
+        maxlength
+        ...
+label
+    define una etiqueta para muchos elementos del FORMULARIOS
+    atributo for de label debe ser igual al atributo id del iput para unirlos
+    <form>
+        <label for="fnombres">NombreS:</label>
+        <input type="text" id="fnombres" name="fnombres">
+    </form>
