@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio FORMULARIOS</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+        <legend>Indique sus preferencias por favor</legend>
+        <label for="fecha">Elija una fecha: </label>
+        <input type="date" name="fecha" id="fecha">
+        <br>
+        <label for="fichero">Elija un fichero:</label>
+        <input type="submit" name="fichero" value="Examinar ... "> No se ha seleccionado ningun fichero
+        <br>
+        <input type="radio" name="proc" id="AMD">
+        <label for="AMD">AMD</label>
+        <input type="radio" name="proc" id="Intel i5">
+        <label for="Intel i5">Intel i5</label>
+        <input type="radio" name="proc" id="Intel i7">
+        <label for="Intel i7">Intel i7</label></fieldset>
+        <fieldset>
+        <legend>Indique sus preferencias por favor</legend>
+        <input type="radio" name="subj" id="Matematicas">
+        <label for="Matematicas">Matematicas</label>
+        <input type="radio" name="subj" id="Historia">
+        <label for="Historia">Historia</label>
+        <input type="radio" name="subj" id="Geografia">
+        <label for="Geografia">Geografia</label>
+        <input type="radio" name="subj" id="Lengua">
+        <label for="Lengua">Lengua</label>
+        <br>
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre" id="nombre"><br>
+        <label for="Apellido">Apellido: </label>
+        <input type="text" name="Apellido" id="Apellido"><br>
+        <label for="Dirección">Dirección: </label>
+        <input type="text" name="Dirección" id="Dirección"><br><br>
+        <label for="color">Escoja un color</label>
+        <input type="color" name="color" id="color">
+        <br><textarea name="texto" id="texto" cols="30" rows="10">Utilice este cuadro para escribir</textarea><br>
+        <label for="fecha">Elija una fecha: </label>
+        <input type="date" name="fecha" id="fecha"><br>
+        <select name="listaop" id="listaop">
+        <option value="Ingles" checked>Ingles</option></select><br>
+        <label for="hora">Elija una hora</label>
+        <input type="time" name="hora" id="hora"><br>
+        <label for="fichero">Elija un fichero:</label>
+        <input type="submit" name="fichero" value="Examinar ... "> No se ha seleccionado ningun fichero<br>
+        <input type="checkbox" name="gen" id="Hombre">
+        <label for="Hombre">Hombre</label>
+        <input type="checkbox" name="gen" id="Mujer">
+        <label for="Mujer">Mujer</label>
+        </fieldset>
+    </form>
+</body>
+</html>
