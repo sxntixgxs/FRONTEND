@@ -19,12 +19,15 @@ input
         radio=boton circular donde se elige una de varias opciones
         checkbox=desplays a checkbox; se puede seleccionar 0 o más opciones
         submit
+        password
+        reset
     >> Mas atributos
         list
         size
         maxlength
         readonly / no se puede editar
         value / es el valor por defekto
+        pattern / pattern="[a-z]{1,15} ahí se podría solo escribir letras de la a a la z y minimo un caracter max 15?
         ...
 label
     define una etiqueta para muchos elementos del FORMULARIOS

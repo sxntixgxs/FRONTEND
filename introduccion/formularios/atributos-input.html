@@ -1,23 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atributos Input</title>
 </head>
+
 <body>
     <h1>Atributos Inputt</h1>
     <hr>
-    <form action="">
+    <form action="" method="get">
         <label for="fnombres">Album's Name</label>
-        <input type="text" name="fnombres" id="fnombres" placeholder="Enter the name···" maxlength="5" minlength="2" size="15" list="Albums" value="Yeezus" readonly>
-        <datalist id="Albums">
+        <input type="text" name="fnombres" id="fnombres" placeholder="Enter the name···" size="15" list="Albums"
+            value="Yeezus">
+        <!-- <datalist id="Albums">
             <option value="MDTF"></option>
             <option value="The life of pablo"></option>
             <option value="The college dropout"></option>
-        </datalist>
-        <br><br>    
+        </datalist> -->
+        <br><br>
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass">
+        <br><br>
         <input type="submit" value="Send">
+        <input type="reset" value="clean">
+        <br>
+        Choose your fav album<br>
+        <input type="radio" id="MDTF" name="fav_albm" value="MDTF">
+        <label for="MDTF">MDTF</label><br>
+        <input type="radio" id="The life of Pablo" name="fav_albm" value="The life of Pablo" checked><!---El checked lo deja seleccionado por defecto de primero!!!!!!-->
+        <label for="The life of Pablo">The life of Pablo</label><br>
+        <input type="radio" id="Yeezus" name="fav_albm" value="Yeezus">
+        <label for="Yeezus">Yeezus</label><br>
+        <input type="radio" id="Graduation" name="fav_albm" value="Graduation">
+        <label for="Graduation">Graduation</label><br>
     </form>
 </body>
+
 </html>
