@@ -1,0 +1,22 @@
+CASCADING STYLE SHEETS
+    HTML y XML
+    Separa la estructura del documento de su presentacion estetica
+    Facil ded entender y modificar el codigo HTML
+    FUNCIONAMIENTO
+        a base de reglas, es decir, declaraciones
+        uso de reglas:
+            Selector, declaracion, propiedad y valores
+            <h1> {
+                color:blue;
+                font-size:12px;
+            }
+                    2 declaraciones de forma <selector>{property:value;property:value;}
+            comentarios /* Lorem ipsum dolor sit amet consectetur, a*/
+            se pone en forma vertical
+            <h1>{
+                padding-left:11em;
+                font-family:Georgia,"Times New Roman",Times;    
+            }
+            Tipos de selectores
+                universal *
+                sintaxis: *{atributo:valor;} se le aplicara a todos los elementos de una ppagina
