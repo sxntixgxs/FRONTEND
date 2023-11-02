@@ -42,8 +42,8 @@ span#especial{
 }
 p a {
     color:green;
-    font-style:oblique;
 }
-table{
-    border:black;
+table, td, th{
+    border:1px solid black;
+    border-collapse: collapse;
 }
