@@ -1,0 +1,49 @@
+
+h1{
+    color: teal;
+}
+.red {
+    color: red;
+}
+.destacado {
+    color:goldenrod;
+}
+h2{
+    color:blue;
+}
+p a{
+    color:red;
+}
+em{
+    color:blue;
+    font-style: italic;
+}
+span.especial{
+    color:purple;
+}
+caption{
+    color:blue
+}
+.especial{
+    color:gold;
+}
+
+td strong{
+    color:goldenrod;
+}
+table{
+    color:green;
+}
+#adicional{
+    color:rgb(107, 142, 35)
+}
+span#especial{
+    color:fuchsia;
+}
+p a {
+    color:green;
+    font-style:oblique;
+}
+table{
+    border:black;
+}

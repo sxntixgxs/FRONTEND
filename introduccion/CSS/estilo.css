@@ -1,0 +1,22 @@
+*{
+    color: grey;
+}
+p{
+    color:greenyellow;
+}
+.text-import{
+    color:red;
+    font-size: 1.8em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#text-html{
+    color: blue;
+}
+div p sub{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: tomato;
+    font-style: oblique;
+}
+div p.text-import {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

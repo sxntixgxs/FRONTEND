@@ -34,4 +34,21 @@ CASCADING STYLE SHEETS
                 adyacente primero + segundo = primero se revisa el segundo es decir se lee .segundo y luego .primero   
                 hijo .padre>.hijo
                 descendiente ---ç
+            nombrar selectores
+            utilizar numeros al fnal, y si se usan mayuscula en lowerCase
+            separar con guiones
+            que sea legibñe -en Cascada
+            COMBINAR ELEMENTOS SIEMPRE QUE SE PUEDA
+            h1,h2,h3 {font-family ...}
+            fromatos cortos
+            div {
+                padding-top:8px;
+                adding-top:16px;
+                adding-top:8px;
+                adding-top:16px;
+            }
+            div {padding: 8px, 16px} por ejemplo
+            nombres descriptivos en los selectores
+            Validar el código css W3C
+            
 
