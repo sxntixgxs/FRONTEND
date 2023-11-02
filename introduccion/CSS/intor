@@ -20,3 +20,18 @@ CASCADING STYLE SHEETS
             Tipos de selectores
                 universal *
                 sintaxis: *{atributo:valor;} se le aplicara a todos los elementos de una ppagina
+                etiqueta 
+                sintaxis etiqueta{atributo:valor;}
+                clase para varios
+                sintaxis .class{atributo:valor;}
+                identificador para uno solo
+                sintaxis #id{atributo:valor}
+                descendiente
+                sintaxis selector1 selector 2 selectorN{atributo:valor}
+                combinaciones 
+                ---
+                ---
+                adyacente primero + segundo = primero se revisa el segundo es decir se lee .segundo y luego .primero   
+                hijo .padre>.hijo
+                descendiente ---ç
+
