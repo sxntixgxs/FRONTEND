@@ -1,0 +1,12 @@
+ELEMENTOS EN BLOQUE Y EN lLINE
+BLOQUE TODO EL ANCHO LO QUE SIGUE VA DEBAJO
+LINEA AL MENOS TODO EL CONTENIDO LO QUE SIGUE VA AL LADO
+<h1 <p son bloque
+<em <strong son linea
+Propiedades
+    Contenido
+    Padding-> Espacio que va entre el contenido y su borde
+    Borde-> Linea que rodea la caja
+    Margen-> espacio entre la caja y las cajas al rededor de esta
+/home/spukN01-017/Pictures/Screenshots/Screenshot from 2023-11-02 19-01-42.png
+
