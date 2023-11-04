@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Bordes</title>
+    <style>
+        p{
+            margin: 10px auto;
+        }
+        #primero{
+            height: 50px;
+            border-style: dotted dashed;
+            border-width: 5px;
+            border-color: mediumseagreen goldenrod red blue;
+            margin: 15px;
+        }
+        #segundo{
+            height: 50px;
+            border-style: solid;
+            border-width: 12px;
+            border-color: cyan black pink;
+            border-top-width: 5px;
+            border-bottom-width: 5px;
+            margin: 15px;
+        }
+        #tercero{
+            height: 80px;
+            border-style: dotted dashed;
+            border-width: 5px;
+            border-color: mediumseagreen goldenrod red blue;
+            margin: 15px;
+        }
+        #tercero p{
+            height: 50px;
+            border-style: solid;
+            border-width: 12px;
+            border-color: cyan black pink;
+            border-top-width: 5px;
+            border-bottom-width: 5px;
+            margin: 10px 10px auto;
+        }
+        #cuarto{
+            height: 150;
+            border: solid 3px black;
+            margin: 15px;
+        }
+        #puntoa{
+            height: 130px;
+            border: solid 3px black;
+            margin: 7px auto;
+            width: 93%;
+        }
+        #puntob{
+            height: 107px;
+            border: solid 3px black;
+            margin: 7px auto;
+            width: 93%;
+        }
+        #puntoc{
+            height: 95px;
+            border: solid 3px black;
+            margin: 7px auto;
+            width: 93%;
+        }
+        #puntod{
+            height: 80px;
+            border: solid 3px black;
+            margin: 7px auto;
+            width: 93%;
+        }
+        #puntoe{
+            height: 45px;
+            border: solid 3px black;
+            margin: 7px auto;
+            width: 93%;
+        }
+        #puntoe p{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="primero">
+        <p>esta es una caja con diferentes tipos de bordes</p>
+    </div>
+    <div id="segundo">
+        <p>esta es otra caja con diferentes tipos de bordes</p>
+    </div>
+    <div id="tercero">
+        <p>esta es otra caja con diferentes tipos de bordes dentro de otra caja</p>
+    </div>
+    <div id="cuarto">
+        <div id="puntoa">
+            <div id="puntob">
+                <div id="puntoc">
+                    <div id="puntod">
+                        <div id="puntoe"><p>esta es otra caja con diferentes tipos de bordes dentro de otra caja</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

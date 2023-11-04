@@ -1,0 +1,31 @@
+COLORES
+    ->funciones rgb #rrggbb hsl(color, saturacion, brillo)
+        ... hwb(color, claridad, oscuridad) 
+    palabras clave color
+        red blue yellow green ... hasta 150
+        tambien existen valores como transparent o currentColor
+            ... para utilizar el mismo que ya se esta usando para
+                ... el texto
+    ***
+            background-color: rgb(255,79,71, .1);
+                ... los tres primeros son el rgb y el cuarto es la 
+                    ... opacidad/transparencia y es un numero de 0-1
+    ***
+        canvas color del fondo del contenido de una app o Document
+        buttonface color predeterminado de windows para los botones
+        linktext
+        ...
+    *** 
+        colores clave - blue, no le puedes agregar la transparencia, solo al
+            ... rgb
+    *** 
+        gradientes
+            ... posibilidad de incorporar efectos de color 
+                    ...linear-grandient(,,...)gradiente colores hacia abajo
+                        ... background-image: linear-gradient(blue, red);
+                    ... to right gradiente de izquierda a derecha
+                        ... background-image: linear-gradient(to right, blue, yellow, blue);
+                    ... direccion del gradiente se puede usar con palagras o con grados; rad
+                        to top 360deg
+                    ... se le puede ajustar el porcentaje de donde debe aparecer; si no se especifica va a tomar valores equivalentes
+                        ...         background-image: linear-gradient(to right, blue 32%, yellow 62%, blue);
