@@ -1,0 +1,17 @@
+Background-repeat;
+    por defecto el Background-image repite la imagen tanto horizontal como verticalmente;
+    es recomendado para no utilizar imagenes tan grandes
+    valor sig
+    repeat repite la imagen del fondo h y v
+    repeat-x Solamente la repite de forma       ...horizontal nunca de forma vertical
+    repeat-y  Solamente la repite de forma vertical nunca de forma horizontal ....
+    NOTA: si se utilizan ambas pues se replica la imagen por todo el contenedor, esto viene por defecto al utilizar Background-repeat;
+    no repeat; solo se va a utilizar una vez, con el tamñao que viene la imagen 
+    space; evita que la imagen se corte al introducir un espacio entre repeticiones individuales; 
+    round; ajusta o expande la imagen al espacio disponible no va a dejar que s ecorte la imagen sino la v a arepetir y no se mostraria cortada
+    NOTA: se puede utilizar Background-repeat: repeat-x round; por ejemplo ! ! ! 
+Background-position: right top;
+    le ajustamos la posicion !
+    si se le pone x ejemplo right 60%; 
+        ... no se ajusta a la mitad sino en el porcentaje que se le dio
+        

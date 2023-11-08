@@ -29,3 +29,5 @@ COLORES
                         to top 360deg
                     ... se le puede ajustar el porcentaje de donde debe aparecer; si no se especifica va a tomar valores equivalentes
                         ...         background-image: linear-gradient(to right, blue 32%, yellow 62%, blue);
+
+article:nth-child(#) > section {}!!!!!!
