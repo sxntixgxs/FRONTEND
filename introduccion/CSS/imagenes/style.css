@@ -24,19 +24,59 @@ nav{
 nav p{
     padding: 5px;
 }
-aside:nth-child(1){
+aside:nth-child(1),aside:nth-child(2),aside:nth-child(3){
     border: 1px solid black;
     width: 15%;
     padding: 10px;
     margin-bottom: 10px;
 }
 aside:nth-child(2){
-    border: 1px dotted black;
-    width: 15%;
-    padding: 10px;
-    background-color: rgb(255, 233, 0,.3);
+    border-style: dotted;
+    background-color: rgb(255, 233, 0,.3)
 }
-aside:nth-child(3){
+section:nth-child(3){
+    position: relative;
+    left: 1273px;
+    bottom: 1694px;
+}
+
+section>article{
+    position: relative;
+    left: 20%;
+    bottom: 850px;
+    margin-bottom: 20px;
+    padding: 0px;
+    display: inline;
+}
+section>article>div{
+   border: 1px solid black;
+   width: 200px;
+   height:  200px;
+   background-image: url("img/ejercicio-pag-web/0060253743926_600.png");
+   background-repeat: no-repeat;
+   background-size: 200px;
+   margin-right: 10px;
+}
+section>article>p{
     border: 1px solid black;
-    width: 15%;
+    width: 40%;
+    text-align: left;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    left: 15%;
+    top: -210px;
+    margin-left: -20px;
+    
+}
+footer{
+    position: absolute;
+    left: 110px;
+    top: 1000px;
+    background-color: rgb(128, 128, 128,.1);
+    width: 83%;
+    height: 30px;
+}
+footer>p{
+    padding: 1px;
 }
