@@ -31,3 +31,4 @@ COLORES
                         ...         background-image: linear-gradient(to right, blue 32%, yellow 62%, blue);
 
 article:nth-child(#) > section {}!!!!!!
+pseudoselectores?pseudoclases?

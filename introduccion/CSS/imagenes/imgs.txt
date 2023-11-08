@@ -12,6 +12,13 @@ Background-repeat;
     NOTA: se puede utilizar Background-repeat: repeat-x round; por ejemplo ! ! ! 
 Background-position: right top;
     le ajustamos la posicion !
-    si se le pone x ejemplo right 60%; 
+    si se le pone x ejemplo right 30%; 
         ... no se ajusta a la mitad sino en el porcentaje que se le dio
-        
+    o los dos en porcentaje se le puede poner
+    75% 20%
+    y+ x+
+    y: es positiva hacia abajo;
+    x: es positiva hacia la derecha;
+background-size: 48px 48px;
+    se puede afectar el width y el coso
+    el primer valor es height y el segundo es width
