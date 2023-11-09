@@ -1,0 +1,21 @@
+atributo
+pseudoclase
+pseudoelemento
+!!!selector, id, clase ....
+SELECTORES BASICOS
+    selector de etiqueta <div></div>
+    #page id deberia ser un unico elemento
+    .primary seleccionamos por clase
+    button.primary mixto en este caso por elemento y clase
+    class="primary classic large" estariamos inyectandole 3 clases a ese elemento!
+SELECTORES DE ATRIBUTOS
+    parte de las reglas de estilo de css que permiten seleccionar elementos HTML en funcion de los ...
+    con los atributos css se podria seleccionar los elementos que contiene un atributo especifico ??
+    los atrtibutos se indican con []
+ATRIBUTOS CON EXPRESIONES REGULARES
+    [href]
+    [href="#top"]
+    [class~="miclase"] -atributo con lista de palabras- afecta a todos los elementos de la clase que tengan el atributo miclase
+    [lang|="es"] a todos lso elementos del lenguaje que empiezen por es
+    [href¨^=....] comienzo del atributo
+    a[href*="mipagina"]{...} busca que en cualquier parte del valor de ese atributo incluya mi pagina

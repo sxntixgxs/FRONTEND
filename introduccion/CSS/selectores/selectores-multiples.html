@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores multiples</title>
+    <style>
+        .classic{
+            border: 1px solid tomato;
+        }
+        .primary{
+            font-size: 5rem;
+        }
+        .large{
+            width: 50%;
+        }
+        button.classic.primary.large{
+            color: green
+        }
+        button[disabled]{
+            width: 25%;
+        }
+        [disabled]{
+            border: 2px solid black;
+            margin-left: 50px;
+        }
+        a[rel="nofollow"]{
+            background-color: red;
+        }
+        [data-mood~="happy"]{
+            background-color: green;
+            color: white;
+            padding: 5px;
+        }
+
+        [lang|="es"]{
+            background: red;
+            color: white;
+            padding: 5px;
+
+        }
+        a[href]::after{
+            content: "URL [" attr(href)"]";
+            display: inline-block;
+            color: #666;
+        }
+        a[href$=".pdf"]::before{
+            content: url(/home/spukN01-011/Downloads/icons8-download-24.png)
+        }
+    </style>
+</head>
+<body>
+    <button class="classic primary large">Botón</button><br><br>
+    <button class="classic large" disabled>Button#2</button><br>
+    <input type="radio" name="miradio" id="miradio" disabled><br><br>
+    <a href="https://campuslands.com" rel="nofollow">CampusLandZ</a>
+    <a href="https://bmw.com" data-mood="happy sad" rel="follow">B M W</a>
+    <br>
+    <div data-mood="happy sad">ONE</div><br><br>
+    <div lang="es-MX en-EN">English</div>
+    <br>
+    <a href="https://www.campuslands.pdf" download>Documento Campus PDF</a><br><br>
+</body>
+</html>
