@@ -1,0 +1,36 @@
+
+.menu-item {
+    position: relative;
+    padding: 5px;
+    border: 1 solid black;
+    background-color: rgb(128,128,128,.4);
+    color: black;
+    width: 8%;
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+.menu-item::before {
+    content: url("apagado.png");
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    width: 10px; /* Ajusta el ancho según sea necesario */
+    height: 20px; /* Ajusta la altura según sea necesario */
+    margin-right: 20px;
+}
+.menu-item span{
+    margin-left: 20%;
+}
+.menu-item:hover::before {
+    content: url("on.png");
+    position: absolute;
+    top: 20%;
+    left: 10px;
+    width: 10px; /* Ajusta el ancho según sea necesario */
+    height: 20px; /* Ajusta la altura según sea necesario */
+    margin-right: 20px;
+}
+.menu-item:hover{
+    background-color: rgb(128,128,128,.9);
+}
