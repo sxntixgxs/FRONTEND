@@ -14,9 +14,9 @@
     content: url("apagado.png");
     position: absolute;
     top: 20%;
-    left: 10px;
-    width: 10px; /* Ajusta el ancho según sea necesario */
-    height: 20px; /* Ajusta la altura según sea necesario */
+    left: 10px; 
+    width: 10px; 
+    height: 20px; 
     margin-right: 20px;
 }
 .menu-item span{
@@ -27,8 +27,8 @@
     position: absolute;
     top: 20%;
     left: 10px;
-    width: 10px; /* Ajusta el ancho según sea necesario */
-    height: 20px; /* Ajusta la altura según sea necesario */
+    width: 10px; 
+    height: 20px;
     margin-right: 20px;
 }
 .menu-item:hover{
