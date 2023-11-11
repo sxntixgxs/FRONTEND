@@ -1,0 +1,24 @@
+.caja-azul{
+    margin: 2rem;
+    background-color: white;
+    height: 180px;
+    border: 1px solid blue;
+}
+.caja-gris{
+    position: relative;
+    width: 8%;
+    background-color: darkgray;
+    height: 85%;
+    left: 40%;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.red-point{
+    width: 10%;
+    height: 10%;
+    background-color: red;
+    position: relative;
+    left: 53%;
+    top: 53%;
+    border-radius: 10px;
+}

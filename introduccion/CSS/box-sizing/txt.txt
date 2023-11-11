@@ -1,0 +1,28 @@
+Box-sizing:
+    por defecto el valor es content Box; recalcula por ejemplo si hay un padding se incluye dentro el width de 50 que establecimos y el padding es de 10 entonces lo de adentro solo puede valer 30 con el fin de que no se salga de lo que establecimos -se calcula con todo lo que esta dentro del border es decir el padding y el contenido
+    el otro valor posible es ...
+display:
+    permite modificar ...
+    valores -> block; inblock ;inline block; flex; inline-flex; list-item; table; grid; inline-grid
+======
+visibilidad:
+    ocultar elementos:
+        display; visibility; opacity
+            display: none -> el navegador ignora por completo ese valor y no lo muestra visualmente
+            ***si escribes .texto el visual comleta un div con la clase texto
+        visibility:
+            hidden: lo mismo que el display none pero con esta opcion SI se guarda el espacio donde debe ir esa caja; queda en blanco la cjaa, nadie ocupa su espacio en la pantalla
+            collapse: solo para tablas; el elemento se contrae para no ocupar espacio
+====
+position:
+    static; relative; absolute; fixed; sticky;
+    static-> es la que viene por defecto
+    relative-> los elementos se colocan exactamente igual que en el posicionamiento estatico / se ajustan en el contenedor / cuando ya se pone relative podemos usar los atributos top bottom left y se v a amove rdentro del contenedor si a la misma clase por ejemplo se le pone left y right la que se va a regir es left; y top rige sobre bottom 
+    absolute-> se ajusta al contenido y queda como flotando; usa el primer contenedor que tenga un contenido diferente al static en este caso seria sobre el body los cambios que se vayan a hacer; si uqisiera que se ajustara al div padre hay que ponerle un tipo de position no statica al div padre
+    fixed: el posicionamiento fijo es hermano del absoluto; funciona exactamente igual; excepto que hace que el elemento se muestre en una posicion fija dependiendo de la region visual del navegador. Es decir ... asi se haga el scroll siempre va a seguir ahi
+    sticky: es como pegajoso es decir se mantiene hasta que vaya otro?, es decir no se va  asalir del div padre, se mantiene hasta que dejemos de ver el div padre
+====
+profundidad:
+    niveles- z-index son como capas; uno mismo le puede asignar sus valores si -1 si 1 si 5 si lo que sea
+
+        
