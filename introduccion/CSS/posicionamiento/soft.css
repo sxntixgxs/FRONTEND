@@ -2,7 +2,7 @@
     margin: 7px;
     box-sizing: border-box;
     border-radius: 10px;
-    height: 100rem;
+    height: 480px;
 }
 header{
     background-color: rgb(138,43,226);
@@ -48,5 +48,5 @@ aside{
 footer{
     height: 15%;
     background-color: #556b2f;
-    float: bottom;
+    margin-bottom: 5px;
 }
