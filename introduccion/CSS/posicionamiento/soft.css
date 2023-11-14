@@ -2,7 +2,7 @@
     margin: 7px;
     box-sizing: border-box;
     border-radius: 10px;
-    height: 1020px;
+    height: 100rem;
 }
 header{
     background-color: rgb(138,43,226);
@@ -21,20 +21,27 @@ nav{
     height:10%;
     width: 100%;
 }
-section{
+.izq{
     background-color: #7fffd4;
     width: 70%;
-    height: 65%;
+    height: 65rem;
     /* height: 100vh; */
     padding: 20px;
+}
+section{
+    display: flex;
+    margin: 0px;
+    height: fit-content;
 }
 .article{
     background-color: #b22222;
     height: 22%;
+
 }
 aside{
     background-color: #deb887;
     width: 30%;
+    height: 65rem;
     float: right;
     
 }
