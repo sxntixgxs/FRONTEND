@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox eje 3</title>
+    <style>
+        header{
+            background-color: goldenrod;
+            color: black;
+            font-weight: bold;
+            width: 100%;
+            height: 24px;
+            text-align: center;
+            padding: 10px;
+            box-sizing: content-box;
+        }
+        .container{
+            display:flex;
+            width: 100%;
+            height: 100rem;
+
+        }
+        .mid{
+            flex-grow: 2;
+            text-align: center;
+            background-color: white;
+            padding: 24px;
+        }
+        .sides{
+            background-color: gray;
+            flex-grow: 1;
+            text-align: center;
+            padding: 24px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>Titulo de la página</header>
+    <div class="container">
+        <div class="sides">Lateral Izquierdo</div>
+        <div class="mid">Zona Central</div>
+        <div class="sides">Lateral Derecho</div>
+    </div>
+</body>
+</html>
