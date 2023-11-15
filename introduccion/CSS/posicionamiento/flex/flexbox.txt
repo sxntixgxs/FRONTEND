@@ -1,0 +1,12 @@
+sistema de elementos  flexibles que llega con la idea de que nos olvidemos de los mecanismos anteriores y acostumbrarnos a una manera mas potente
+
+FLEX |
+    contenedor:
+         elemento  que contiene los items flexibles ; es el que v aa tener las propiedades que hacen que lso items se acomoden de una forma u otra
+    item: 
+        hijos del contenedor ; por defecto se acomodan en fila horizontal
+    eje secundario:
+         eje y
+    eje principal:
+         eje x
+         el signo de plata al crear un div te cuenta de 1 en 1

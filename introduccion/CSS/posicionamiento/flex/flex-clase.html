@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex en clase</title>
+    <style>
+        .horizontal{
+            width: 90%;
+            margin-left: 5%;
+        }
+        ul{
+            display: flex;
+            background-color: rgba(123,198,199,0.8);
+            width: 100%;
+            flex-direction: row wrap;
+            justify-content: space-around;
+            list-style: none;
+        }
+        li{
+            padding: 1px;
+            border-left: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <section class="horizontal">
+        <ul>
+            <li>Home</li>
+            <li>Servicios</li>
+            <li>Opciones</li>
+            <li>Planes</li>
+            <li>Contacto</li>
+        </ul>
+
+    </section>
+</body>
+</html>
