@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendiendo  GRID CSS</title>
+    <style>
+        .grid-container{
+            background-color: #2196F3;
+            padding: 10px;
+            margin: 0 auto;
+            display: grid;
+
+            /*hacemos que Item1 reciba el nombre de myArea y abarque las 5 columnas en un diseño de cuadricula de cinco columnas
+            /*grid-template-columns: auto auto auto  ;*/
+/*           grid-template-rows: 20% auto 100px;*/
+            width: 80%;
+            height: 100vh;/*tamaño de la pantalla en vertical*/
+            gap: 4px;
+            row-gap: 10px;
+            /*justify-content: space-between;*/
+            grid-template-areas: 'Encabezado Encabezado Encabezado'
+            'Menu Menu Menu' 'AsideL Principal Aside' 'Footer Footer Footer ';
+        grid-template-rows: 20% 10% auto 20%;
+        grid-template-columns: 20% auto 60%;
+        }
+        .grid-item{
+            background-color: rgba(255,255,255,0.8);
+            border:1px solid rgba(49, 33, 33, 0.8);
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .item1{
+            grid-area: Encabezado ;
+        }
+        .item2{
+            grid-area: Menu ;
+        }
+        .item6{
+            grid-area: AsideL
+        }
+        .item3{
+            grid-area: Principal ;
+        }
+        .item4{
+            grid-area: Aside ;
+        }
+        .item5{
+            grid-area: Footer ;
+        }
+
+        /*.item5{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+        .item9{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        } 
+        .item8{
+            grid-area: row-star / col-start / row-end / col-end
+            grid-area:1/2/5/6; /*comenzara en la linea de la fila 1 y la columna 2 y terminara en la linea de la fila 5 y columna 6
+        }*/
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item1">Encabezado</div>
+        <div class="grid-item item2">Menu</div>
+        <div class="grid-item item6">AsideL</div>
+        <div class="grid-item item3">Principal</div>
+        <div class="grid-item item4">Aside</div>
+        <div class="grid-item item5">Footer</div>
+
+
+    </div>
+</body>
+</html>

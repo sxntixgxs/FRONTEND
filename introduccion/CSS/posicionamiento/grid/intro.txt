@@ -1,0 +1,21 @@
+...Diseño de cuadricula CSS ofrece un sistema de diseño basado en filas y columnas lo que facilita el diseño de paginas web mas elaborados!
+Consta de que los elementos estén establecidos como una cuadricula! 
+    .grid-container>grid-item{Item $}*9
+grid-template-columns: 1fr 2fr 1fr 1fr; le puedo agregar cada vbalor es una columna mas
+
+
+grid graps:
+    los espacios entre cada columna fila es gap; se puede ajustar su tamaño column-gap;row-gap;gap
+como hacer que un item ocupe más de una fila o columna?
+    con las lineas de cuadricula; el origen es x+ y aumenta hacia abajo
+    entonces si el item 1 va a ocupar 2 columnas:
+    .item1{
+        grid-column-start: 1;
+        gridd-column.end:3;
+    }
+    justify-content: se utiliza para alinear toda la cuadricula dentro del contenedor; es decir se pone en el css del contenedor esa propiedad para que funcione se quito grid template rows con fr y el column se deja en auto auto auto
+Propiedad grid-area propiedad abreviada para:
+    grid-row-start,grid-column-start,grid-row-end,grid-column-end
+Elementos de la cuadricula de nombres:
+    ,,,
+    Item1 recibe el nombre "myArea" y abarca las cinco columnas en un diseño de cuadricula de cinco columnas
