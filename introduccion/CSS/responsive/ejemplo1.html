@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=Aprendiendo, initial-scale=1.0">
+    <title>Aprendiendo diseño responsivo</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: antiquewhite;
+        }
+        @media screen and (max-width: 683px){
+            body{
+                background-color: tomato;
+
+            }
+            h1{
+                text-align: center;
+                text-transform: capitalize;
+            }
+            img{
+                width: 40%;
+            }
+        }
+        @media screen and (max-width: 480px){
+            img{
+                width: 30%;
+            }
+        }
+        @media (min-width: 768px){
+            body{
+                background-color: pink;
+            }
+            h1{
+                text-align: right;
+                text-transform: uppercase;
+            }
+            img{
+                width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendiendo diseño responsivo</h1>
+    <br><br>
+    <img src="img/Ye_album_cover.jpg" alt="cover-ye">
+</body>
+</html>

@@ -1,0 +1,61 @@
+Se trata de redimensionar y colocar los elementos de la web de forma que se adapten al ancho de cada dispositivo ...
+
+Se combinan muchos elementos; elementos html consultas de css unidades css uso de varios activos de un solo recurso; el enfoque mobile first
+
+es una buena opcion para muchos sitios web con mucho ocntenido informativo
+mas facil para verlo desde el movil
+diseño desarrollo y mantenimiento más rentable
+
+no es 100% adaptable en moviles
+ 
+ es necesario usar unidades relativas como el % en vez de los pixeles
+
+ mientras que en el escritorio se cuenta con tres columnas para distribuir los contenidos en los dispositivos moviles solo se cuenta con una columna
+ usar anidacion para que tus elementos se adapten a pantallas contraidas
+
+ dependiendo del dispositivo el contenido debe extenderse para ocupar todo el ancho de la pantalla
+
+ no hay grandes diferencias entre desarrollar primero la pantalla del movil o del desktop
+
+ si el diseño contara con muchos efectos o detalles lo mas recomendable es utilizar vectores ! ! !
+
+ La tendencia actualmente es el mobile first web 
+    ... mejor experiencia de usuario
+    ... la mayor parte de usuarios navegan con dispos mov
+    ... se pueden utilizar algunas funciones del telefon
+    ... menor velocidad de carga
+    ... en desktop no estará al 100%
+    ... no es lo más optimo para el SEO
+    ... no es adecuado para WEBS con contenido muy pesado
+***usar sitios que existen para saber si una pagina esta optimizada para moviles https://www.youtube.com/watch?v=dyOOHEx6q18
+
+CSS media queries
+    consultas de medios son utiles cuando deseas modificar tu pagina web o aplicacion en funcion del tipo de deispositivo como una impresora o una pantalla o de caracteristcas y parametros especificos como el tamaño de la pantalla
+Break points
+    puntos especificos donde la cambia empieza a cambiar
+    deben servir como puntos de referencia
+    breakpoints clasicos; ancho o cantidad de pixeles del dispositivo
+de resolucion
+    Basicos:
+Todos los moviles y webs suelen encontrarse con ciertos breakpoints que nos permiten hacer un diseño responsivo general
+de 0 a 480 moviles
+de 480 a 960 tablet
+de 960 a 1328 pc
+    Completos:
+Podemos ser más específicos para definir si es menor de x es un movil pequeño o es un movil grande...
+
+320px
+768px
+1024px
+
+    Personalizados
+Se salen de los conjuntos de breakpoints completos y empezamos a diseñar específicamente para un producto o tamaño!
+Como se pueden tomar estas decisiones podemos revisar en Google Analytics que tipo de pantallas usan un tipo de publico en especial
+https://gs.statcounter.com
+
+Se debe entender bien que es Max y Min width
+    las medidas hasta ese maximo y/o minimo de pantalla
+
+@media(max-width:768px){   
+}
+EJEMPLO css media queries

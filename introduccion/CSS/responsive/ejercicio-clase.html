@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Clase</title>
+    <style>
+        /*
+        de 0 a 480 moviles
+        de 480 a 960 tablet
+        de 960 a 1328 pc*/
+        *{box-sizing: border-box;}
+        /* movil*/
+        @media (min-width:480px){
+            .papanoel{
+                grid-column: 1/-1;
+            }
+            .papanoel2{
+                grid-column: 1/-1;
+            }
+            .lechona{
+                grid-column: 1/-1;
+            }
+            .duende{
+                grid-column: 1/-1;
+            }
+        }   
+        /*tablet*/
+        @media (min-width:480px) and (max-width:960px){
+            body{
+                display: grid;
+            }
+            .papanoel{
+                grid-area: 1/1;
+            }
+            .papanoel2{
+                grid-column: 2/2;
+            }
+            .lechona{
+                grid-column: 1/1;
+                grid-row: 2;
+            }
+            .duende{
+                grid-column: 2/2;
+                grid-row: 2;
+            }
+        }
+        /*ordenador*/
+        @media (min-width:960px){
+            body{
+                display:flex
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="papanoel"><img src="img/papanoel.png" alt="papa noel"></div>
+    <div class="papanoel2"><img src="img/papanoel2.png" alt="papa noel 2"></div>
+    <div class="lechona"><img src="img/lechona.png" alt="cerdito"></div>
+    <div class="duende"><img src="img/duende.png" alt="duende"></div>
+
+</body>
+</html>
