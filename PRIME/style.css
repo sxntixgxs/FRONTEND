@@ -1,0 +1,62 @@
+:root{
+    --purple:#8e44ad;
+}
+*{
+    font-family: 'Roboto Mono', monospace;  
+    background-color: black;
+    color: white;
+    margin: 10px;
+    box-sizing: border-box;
+    
+}
+h1,h2,h3,h4{
+    color: var(--purple);
+}
+.welcome{
+    font-size: 300%;
+}
+.high{
+    color: white;
+}
+ul{
+    list-style: none;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top{
+    width: 95em;
+    max-width: 95%;
+    height: 3em;
+    max-height: 5em;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mid{
+    display: grid;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 95%;
+    padding-right: 3%;
+}
+.mid div{
+    grid-area: 1/1;
+}
+.mid img{
+    grid-area: 1/2;
+    border: 3px solid var(--purple);
+    border-radius: 4%;
+}
+footer {
+    display: flex;
+    align-content: center;
+    width: 95%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
