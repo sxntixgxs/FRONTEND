@@ -25,7 +25,26 @@ ul{
         display: flex;
         justify-content: space-between;
     }
-    #search{
+    input{
         width: 20rem;
+        background-color: white;
+        color: black;
+        border: 1px solid var(--purple);
+        border-radius: 3px;
+        margin-right: 3px;
+        height: 30px;
+        max-height: 3rem;
+    }
+    .art img{
+        height: 150px;
+        border-radius: 60%;
+        max-width: 150px;
+    }
+    .art h2{
+        color: var(--purple);
+    }
+    .art{
+        display: flex;
+        flex-direction: column;
     }
 }
