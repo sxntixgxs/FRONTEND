@@ -35,16 +35,41 @@ ul{
         height: 30px;
         max-height: 3rem;
     }
-    .art img{
-        height: 150px;
-        border-radius: 60%;
-        max-width: 150px;
-    }
-    .art h2{
-        color: var(--purple);
-    }
     .art{
         display: flex;
         flex-direction: column;
     }
+    article{
+        display:grid;
+        
+    }
+    article img{
+        grid-area: 3/2/4/2;
+    }
+    article h2{
+        grid-area: 2/1/2/1;
+    }
+    article h4{
+        grid-area: 2/2/2/2;
+    }
+    article p{
+        grid-area: 3;
+    }
+    article ul{
+        grid-area: 5/1;
+        display: flex;
+        align-items: flex-start;
+        padding: 0%;
+        margin-left: -10px;
+    }
+    .art img{
+        height: 150px;
+        border-radius: 60%;
+        max-width: 150px;
+
+    }
+    .art h2{
+        color: var(--purple);
+    }
+
 }
