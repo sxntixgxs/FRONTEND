@@ -9,6 +9,11 @@
     box-sizing: border-box;
     
 }
+body{
+    width: 960px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 h1,h2,h3,h4{
     color: var(--purple);
 }
@@ -18,8 +23,12 @@ h1,h2,h3,h4{
 .high{
     color: white;
 }
+header{
+    margin-top: 1px;
+}
 ul{
     list-style: none;
+
 }
 section{
     display: flex;
@@ -31,6 +40,7 @@ section{
     max-width: 95%;
     height: 3em;
     max-height: 5em;
+    border-bottom: 2px solid var(--purple);
 }
 ul{
     display: flex;
@@ -55,8 +65,103 @@ ul{
 footer {
     display: flex;
     align-content: center;
-    width: 95%;
+    width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+/*960 a 1328 pc*/
+@media (min-width:960px){
+
+    .readm{
+        color: var(--purple);
+    }
+    .art{
+        display: grid;
+    }
+    .item1{
+        grid-area: 1/1;
+    }
+    .item2{
+        grid-area: 1/2;
+    }
+    .item3{
+        grid-area: 2/1/2/3;
+    }
+}
+/*480px to 960px*/
+@media (min-width:480px) and (max-width:960px){
+    body{
+        width: 600px;
+    }
+    .top{
+        width: 95rem;
+        max-width: 95%;
+        height: 50px;
+        max-height: 50px;
+        margin: 0 auto;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        border-bottom: 2px solid var(--purple);
+        font-size: 100%;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    nav li{
+        max-height: fit-content;
+    }
+    .top nav ul{
+        padding-left: 0px;
+    }
+    .top h2{
+        margin: 1px 10px 0px 0px;
+    }
+    .mid{
+        font-size: 75%;
+        border-bottom: 2px dashed var(--purple);
+    }
+    .art{
+        display: grid;
+    }
+    footer{
+        width: 85%;
+    }
+}
+/*480 moviles*/
+@media (max-width:480px){
+    body{
+        width: 400px;
+    }
+    .top{
+        width: 70%;
+        max-width: 95%;
+        height: 50px;
+        max-height: 50px;
+        margin: 0;
+        padding: 0px;
+        border-bottom: 2px solid var(--purple);
+        font-size: 70%;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .mid{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .mid img{
+        /* max-height: 150px;*/
+        display: none;
+    }
+    .art{
+        display: flex;
+        flex-direction: column;
+    }
 }

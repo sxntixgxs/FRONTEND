@@ -1,0 +1,28 @@
+...
+    SE BASAN EN CONSEGUIR UN EFECTO SUAVIZADO ENTRE UN ESTADO INICIAL Y ESTADO FINAL AL REALIZAR UNA ACCION
+
+PROPIEDADES:
+... transition-property all | none | propiedad en especial 
+        indica que propiedad es la que va a cambiar / aplicar la transicion
+   transition-duration 0| 
+        tiempo que dura la transicion
+    transition-delay 
+        numero de segundos que se demora en arrancar, si se omite, arranca directamente
+    atajo: se puede condensar todas las configuraciones con  transition
+        transition <property><duration><timing-function><delay>
+            *el timing function podemos cmabiar cada propiedad, es decir poner un width 0.5s 15s, background-color 3s 10s / define la velocidad ritmo de la transicion en cuestion!...
+                la forma mas simple es usando la funcion predefinida:
+                    ease inicio lento / transcurso rapido / final lento
+                    linear inicio normal / transcurso normal / final normal
+                    ease-in inicio lento / transcurso normal / final normal
+                    ease-out
+                    ease-in-out
+                    cubic-bezier() es una funcion donde podemos darle valores que nosotros
+                    queramos dependiendo de la velocidad que queramos en la transicion: 
+                        parametros: valor: descp: pertenece:
+                        A           X1              p1
+                        B           Y1  
+                        *** cubic-bezier.com ***                          
+Transiciones entrada y salida
+    el hover por ejemplo es solo la trnasicion d entrada, porque al sacar el mouse cambia muy rapido, entonces como hacemos la salida? entonces en el primer estado se coloca que debe hacer cuando salga
+***maquetacion mockflow.com***
