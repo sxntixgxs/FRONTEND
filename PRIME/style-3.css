@@ -2,3 +2,98 @@
             border: 2px solid red;
         }
  para si queda mal*/
+ :root{
+    --purple:#8e44ad;
+}
+*{
+    font-family: 'Roboto Mono', monospace;  
+    background-color: black;
+    color: white;
+    margin: 10px;
+    box-sizing: border-box;
+ }
+ body{
+    width: 960px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.top{
+    width: 95em;
+    max-width: 95%;
+    height: 3em;
+    max-height: 5em;
+    border: 2px solid var(--purple);
+    display: flex;
+    align-content: space-between;
+    align-items: center;
+}
+header{
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 2px;
+    text-align: end;
+
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0px;
+}
+form{
+    display: grid;
+}
+
+fieldset{
+    border: 2px solid var(--purple);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: min-content;
+    max-width: 95%;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+}
+legend{
+    padding: 10px;
+}
+input{
+    border: 1px dashed var(--purple);
+}
+button{
+    background-color: black;
+    border: 2px solid var(--purple);
+    border-radius: 50px;
+
+    height: 3rem;
+    transition: transform 0.3s ease;
+}
+button::after,button::before{
+    opacity: 0.3;
+    background-color: var(--purple);
+    border-radius: inherit;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: transform 0.3s ease;
+}
+button:hover{
+    transform: translate(-12px, -12px);
+    border: 1px solid black;
+    background-color: var(--purple);
+}
+button:hover::after{
+    transform: translate(6px, 6px);
+}
+button:hover::before{
+    transform: translate(12px, 12px);
+}
