@@ -21,6 +21,23 @@ body{
     margin: 0 auto;
     margin: 0 auto;
 }
+nav{
+    width: 100%;
+    border: 2px solid var(--purple);
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+input{
+    width: 20rem;
+    background-color: white;
+    color: black;
+    border: 1px solid var(--purple);
+    border-radius: 3px;
+    margin-right: 3px;
+    height: 30px;
+    max-height: 3rem;
+}
 .actual{
     border: 3px solid var(--verde);
     border-radius: 5px;
@@ -43,16 +60,6 @@ span{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-}
-header{
-    padding-bottom: none;
-    margin: none;
-    border: none;
-    border-radius: 10px;
-    border: 2px solid var(--verde);
-
-    text-align: center;
-    background-color: var(--verde);
 }
 h3, h3 a{
     margin-top: 0%;
@@ -81,12 +88,14 @@ fieldset{
     border-radius: 10px;
     width: 100%;
     text-align: center;
+    justify-content: center;
 }
 legend{
     padding: 10px;
 }
 input{
     border: 1px dashed var(--purple);
+    width: 90%;
 }
 button{
     background-color: black;
@@ -141,27 +150,60 @@ footer{
 .line {
     display: inline;
 }
+.line3{
+    color: white;
+    margin: 10px 30px;
+    background-image: linear-gradient(90deg, #000000, #FFFFFF);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size 700ms ease-in-out; 
+}
+.line3:hover {
+    background-size: 100% 2px;
+}
+
+.line3 {
+    display: inline;
+}
 /* tablet 480-960 */
 @media (min-width:480px) and (max-width:960px){
     body{
         width: 600px;
     }
-    .top{
+    .hidden{
+        display:none;
+    }
+    nav{
         width: 100%;
-        padding: 0%;
+        min-width: 60%;
+        max-width: 600px;
+    }
+    form{
+        width: 70%;
+        max-width: 70%;
+    }
+    nav input{
+        max-width: 100%;
+        padding-right: 0%;
+        margin-right: 0%;
+    }
+    .line3{
+        margin: 10px 0px 10px 0px;
+    }
+    nav ul{
         display: flex;
         flex-direction: row;
-        align-items: center;
-        border-radius: 10px;
+        padding-left: 0%;
     }
-    header{
-        padding-bottom: none;
-        margin: none;
-        border: none;
-        border: 2px solid var(--verde);
-        border-radius: 10px;
-        text-align: center;
-        background-color: var(--verde);
+    section form{
+        padding-left: 25%;
+    }
+    fieldset{
+        width: 100%;
     }
     h3, h3 a{
         margin-top: 0%;
@@ -197,15 +239,6 @@ footer{
     .actual{
         display:none;
     }
-    header{
-        padding-bottom: none;
-        margin: none;
-        border: none;
-        border: 2px solid var(--verde);
-        border-radius: 10px;
-        text-align: center;
-        background-color: var(--verde);
-    }
     h3, h3 a{
         margin-top: 0%;
         background-color: var(--verde);
@@ -214,13 +247,7 @@ footer{
         display: flex;
         padding-left: 5px;
     }
-    li a{
-        border: 2px solid var(--verde);
-        border-radius: 10px;
-        padding: 1px 6px 1px 6px;
-        margin: 0;
-        background-color: var(--verde);
-    }
+
     footer{
         text-align: center;
     }
