@@ -84,18 +84,23 @@ fieldset{
     flex-wrap: nowrap;
     flex-direction: column;
     width: min-content;
-    max-width: 95%;
+    max-width: 100%;
     border-radius: 10px;
     width: 100%;
     text-align: center;
     justify-content: center;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 5%;
 }
 legend{
     padding: 10px;
 }
-input{
-    border: 1px dashed var(--purple);
-    width: 90%;
+fieldset input{
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    width: 80%;
+    margin-left: 10%;
 }
 button{
     background-color: black;
@@ -235,6 +240,11 @@ footer{
     nav ul{
         text-align: center;
         margin-top: 0;
+        display: inline;
+    }
+    .line3{
+        width: 100%;
+        border-bottom: 2px solid var(--verde);
     }
     .actual{
         display:none;
