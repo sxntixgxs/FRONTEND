@@ -145,7 +145,10 @@ article ul{
         border: 2px solid var(--purple);
         border-radius: 3px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+    }
+    .menu{
+        display: flex;
     }
     input{
         width: 20rem;
@@ -235,8 +238,12 @@ article ul{
     }
     nav ul{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding-left: 0%;
+        margin-right: 5%;
+    }
+    .menu{
+        justify-content: flex-start;
     }
     footer{
         display: flex;
