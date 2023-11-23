@@ -176,13 +176,23 @@ footer{
     body{
         width: 400px;
     }
-    .top{
-        width: 100%;
-        padding: 0%;
+    nav{
+        max-height: 15rem;
+        min-width: 200px;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        border: none;
+        flex-direction: column;
+        text-align: center;
+    }
+    nav input{
+        max-width: 100%;
+        height: fit-content;
+    }
+    form{
+        margin-bottom: 0;
+    }
+    nav ul{
+        text-align: center;
+        margin-top: 0;
     }
     .actual{
         display:none;
