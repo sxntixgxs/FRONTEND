@@ -1,0 +1,147 @@
+:root{
+    --purple:#8e44ad;
+    --verde:#2ecc71;
+}
+*{
+    font-family: 'Roboto Mono', monospace;  
+    background-color: black;
+    color: white;
+    margin: 10px;
+    box-sizing: border-box;
+}
+body{
+    width: 1200px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.top{
+    width: 95em;
+    max-width: 95%;
+    height: 3em;
+    max-height: 5em;
+    border: 2px solid var(--purple);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.actual{
+    border: 3px solid var(--verde);
+    border-radius: 5px;
+    padding: 4px 6px 4px 6px;
+    font-weight: bold;
+    list-style: none;
+}
+header{
+    padding-bottom: none;
+    margin: none;
+    border: none;
+    border-radius: 10px;
+    border: 2px solid var(--verde);
+
+    text-align: center;
+    background-color: var(--verde);
+}
+h3, h3 a{
+    margin-top: 0%;
+    background-color: var(--verde);
+    margin-bottom: 0px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0px;
+}
+h1{
+    color: var(--purple);
+    font-size: 300%;
+}
+.art{
+    display: grid;
+}
+article{
+    grid-column: 1/4;
+}
+aside{
+    grid-column: 5/6;
+
+}
+h2{
+    text-align: center;
+}
+aside ul{
+    display: flex;
+    flex-direction: column;
+}
+span{
+    color: var(--verde);
+}
+.line{
+    color: var(--verde);
+    margin: 10px 30px;
+    background-image: linear-gradient(90deg, #000000, #2ecc71);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size 700ms ease-in-out; 
+}
+
+.line:hover {
+    background-size: 100% 2px;
+}
+
+.line {
+    display: inline;
+}
+footer{
+    text-align: center;
+    color: var(--purple);
+}
+.line2{
+    color: var(--purple);
+    margin: 10px 30px;
+    font-size: 120%;
+    background-image: linear-gradient(90deg, #000000, #8E44AD);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size 700ms ease-in-out; 
+}
+
+.line2:hover {
+    background-size: 100% 2px;
+}
+
+.line2 {
+    display: inline;
+}
+.line3{
+    color: white;
+    margin: 10px 30px;
+    background-image: linear-gradient(90deg, #000000, #FFFFFF);
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    background-position: left bottom;
+    transition: background-size 700ms ease-in-out; 
+}
+
+.line3:hover {
+    background-size: 100% 2px;
+}
+
+.line3 {
+    display: inline;
+}

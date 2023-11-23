@@ -15,14 +15,14 @@
  }
 /* desktop 960 */
 
- body{
-    width: 960px;
-    max-width: 1000px;
+body{
+    width: 1200px;
+    max-width: 1300px;
+    margin: 0 auto;
     margin: 0 auto;
 }
 .actual{
-    border: 1px solid var(--verde);
-    background-color: var(--verde);
+    border: 3px solid var(--verde);
     border-radius: 5px;
     padding: 4px 6px 4px 6px;
 }
