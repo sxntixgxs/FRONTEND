@@ -1,0 +1,36 @@
+let fecha = prompt(*Ingrese una fecha con el formato dd/mn/aaaa")
+if (fecha = null || fecha.trim() = **) {
+    alert(*Fecha invalida®)
+
+0}
+
+1 fecha - fecha. trin()
+
+2 let vfec - fecha.split(*/")
+
+3 let dia - Number(vFec[0])
+
+4 let mes - Number(vfec[1])
+
+5 let ano = Number(vfec[2])
+
+6 if (Wumber.isNaN(dia) || Number.isNaN(mes) [| Number.isNaN(ano)) {
+
+7. alert(*La fecha no es valida*)
+
+8 } else if (dia <1 || dia > 31 || mes < 1 Il mes > 12 Il ano < 1) {
+
+9 alert(" fecha invalida®)
+
+0 } else if ( (mes = 4 || mes = 6 || mes = 9 || mes = 11) & (dia > 30)) {
+1 alert(*Fecha invalida®)
+
+2 } else if (mes = 2 6 dia > 28) {
+
+3 alert(*Fecha invalida®)
+
+4 3
+
+5 else {
+
+6 alert( "FECHA VALIDA®)

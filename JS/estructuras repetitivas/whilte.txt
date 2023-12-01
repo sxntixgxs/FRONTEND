@@ -1,0 +1,20 @@
+whilte (condicion){
+    //codigo a repetir
+}
+ej:
+    let i = 0
+    while i <5{
+        console.log("El valor de i es: "+i);
+        i++;
+    }//0 1 2 3 4
+
+do - while
+    primero hace luego pregunta
+    do{
+        //codigo a repetir
+    } while(condicion);
+    let i = 0;
+    do {
+        console.log("El valor de i es: "+i);
+        i++;
+    } while( i < 5 );

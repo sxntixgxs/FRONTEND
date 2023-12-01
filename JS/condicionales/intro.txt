@@ -1,0 +1,37 @@
+IF sencillos
+
+    if (x>10){
+        console.log("x es mayor que 10")
+    }
+if .. Else
+    if (x>10){
+        console.log("x es mayor que 10")
+    }else{
+        console.log("x es menor o igual que 10")
+    }
+if .. else if .. else
+
+SWITCH
+    estructura alternativa al if else if
+    
+    switch(color){
+        case "rojo":
+            console.log("el color es rojo");
+            break;
+        case "verde":
+            console.log("El color es verde");
+            break;
+        default: 
+            console.log("El color no es ni rojo ni verde");
+    }
+OPERADOR TERNARIO
+    una forma de escribir else if en una sola linea
+    let resultado= (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
+    console.log(resultado);
+        se pone la condicion, si se ucmple, se devuelve lo de antes de los dos puntos, sino lo que va despues
+
+NULLISH COALESCING
+    o también conocido como ??, permite saber si la variable es nula o indefinida y devolvera el valor que pongamos a la derecha de los ?? si es nula, si no, el valor que ya tenia
+        const nombre=undefined;
+        const cadena= ´Bienvenido ${nombre??invitado}
+        console.log(cadena)

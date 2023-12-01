@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar fecha</title>
+</head>
+<body>
+    <script>
+        let fecha = prompt('Ingrese la fecha DD/MM/AAAA')
+        if (fecha.length !== 10){
+            alert('ERROR; Formato inválido! cadena incorreta')
+        }else if((fecha.slice(3,5))<1 || Number(fecha.slice(3,5))>12){
+            alert('ERROR; Formato inválido! mes mayor o menor') //mes
+        }else if(fecha.slice((3,5)===2 && fecha.slice(0,2)>28)){
+            alert('ERROR; Formato inválido! FEBRERO')
+        }else if(fecha.slice(0,2)<1 || fecha.slice(0,2)>30){
+            alert('ERROR; Formato inválido! mas o menos dias')
+        }else{
+            alert('Fecha registrada')
+        }
+    </script>
+</body>
+</html>

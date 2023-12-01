@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt('Ingrese a')); let b = Number(prompt('Ingrese b'));        
+        let c = Number(prompt('Ingrese d'))
+        let vraiz=(b**2)-4*a*c 
+        let pos=(vraiz<0) ? false : vraiz
+        if (pos===false){
+            alert('No tiene solucion en los reales')
+        }else if(a!==0){
+            let resultadopos=((-b)+(vraiz)**(1/2))/(2*a)
+            let resultadoneg=((-b)-(vraiz)**(1/2))/(2*a)
+            alert(`el valor de x1 es ${resultadoneg} y x2 es ${resultadopos}`)
+        }
+
+    </script>
+</body>
+</html>

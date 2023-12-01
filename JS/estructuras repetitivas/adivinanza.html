@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adivinanza</title>
+</head>
+<body>
+    <h1>ADIVINANZA</h1>
+    <hr>
+    <script>
+        let n = Number(prompt('Ingresa un numero: '))
+        let r =Math.floor(Math.random() * 5);
+        /*while(n===null || n<1 || n>100){
+            alert('numero invalido')
+            if((n = Number(prompt('Ingresa un numero: ')))>=1 || (n = Number(prompt('Ingresa un numero: ')))<=100){
+                continue
+            }
+
+        }
+        while(n!==r){
+            n > r ? alert('El numero correcto es menor') : alert('El numero correcto es mayor')
+        }
+        if (n===r){
+            alert('CORRECTO')
+        }
+        */
+
+       while(1<n<100){
+            if (n!==r){
+                n>r ? alert('El numero correcto es menor') : alert('El numero correcto es mayor')
+                continue
+            }else{
+                alert('correct')
+                break
+            }
+       }
+    </script>
+</body>
+</html>
