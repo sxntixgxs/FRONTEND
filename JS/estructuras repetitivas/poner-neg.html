@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poner un numero negativo</title>
+</head>
+<body>
+    <h1>Introducir un numero negativo</h1>
+    <hr>
+    <p>Estos son los numeros positivos que ingresó: </p>
+    <div id="listnum"></div>
+    <script>
+        let str=" ";
+        for (let n = Number(prompt('introduzca un numero'));n>0;n = Number(prompt('introduzca un numero'))){
+            str+=`${n}, `
+        }
+        document.getElementById("listnum").innerHTML = str
+    </script>
+</body>
+</html>
