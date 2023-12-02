@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>notas alumno </title>
+</head>
+<body>
+    <script>
+        function estadoEstudiante(n1,n2,n3){
+            let prom=(n1+n2+n3)/3
+            if (prom<=3.9){
+                return "Estudie"
+            }else{
+                return "Becado"
+            }
+        }
+        const leerNota = function(msj){
+            let nota;
+            let repita = false;
+            do {
+                repita=false
+                nota=Number(prompt(msj))
+                if (nota===0){nota=undefined;break;}
+                if (isNaN(nota) || nota<1|| nota>5){
+                    alert('Ingrese una nota valida! [0-5] -.-')
+                    repita=true
+                }
+            }while(repita)
+            return nota;
+        }
+        let nota1 = leerNota('Ingrese la nota 1')
+        if (nota1!==undefined){
+            let nota2 = leerNota('Ingrese la nota 2') 
+            if (nota2!==undefined){
+                let nota3 = leerNota('Ingrese la nota 3')
+                if (nota3!==undefined){
+                    alert(estadoEstudiante(nota1,nota2,nota3))
+                }
+            }
+        }
+
+  //es como un number, pero seria parseFloat, hay parseInt
+    </script>
+</body>
+</html>

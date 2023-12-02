@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma Producto Division</title>
+</head>
+<body>
+    <script>
+        const calculo=function(n1,n2){
+            let pr;
+            if (n1>n2){
+                let suma=n1+n2
+                let resta=n1-n2
+                pr=`El resultado de la suma es ${suma} y el de la resta ${resta}`
+                return pr
+            }else{
+                let producto=n1*n2
+                let div=n1/n2
+                pr=`El resultado de la multiplicacion es ${producto} y el de la div ${div}`
+                return pr
+            }
+        }
+        const leerNum=function(msj){
+            let n;
+            let repita = false;
+            do {
+                repita=false
+                n=Number(prompt(msj))
+                if (n===0){nota=undefined;break;}
+                if (isNaN(n)){
+                    alert('IIngrese un numero valido')
+                    repita=true
+                }
+            }while(repita)
+            return n;
+
+        }
+        let n1=leerNum('Ingrese un numero: ');let n2=leerNum('Ingrese un numero: ')
+        alert(calculo(n1,n2))
+    </script>
+</body>
+</html>

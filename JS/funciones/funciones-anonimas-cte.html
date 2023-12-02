@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones 01</title>
+</head>
+<body>
+    <script>
+        const cuad = function (a,b,c){
+        let vraiz=(b**2)-4*a*c 
+        let pos=(vraiz<0) ? false : vraiz
+        let resultado = "";
+        if (pos===false){
+            return resultado = "NaN";
+        }else if(a!==0){
+            let resultadopos=((-b)+(vraiz)**(1/2))/(2*a)
+            let resultadoneg=((-b)-(vraiz)**(1/2))/(2*a)
+            return `X1 = ${resultadoneg}\nX2=${resultadopos}\n`
+        }
+        }
+        let a = Number(prompt('Ingrese a')); let b = Number(prompt('Ingrese b'));        
+        let c = Number(prompt('Ingrese d'))
+        r = cuad(a,b,c);
+        if (r.length>0 && r!=="NaN"){
+            alert(r)
+        }else{
+            alert('La repsuesta no existe en los reales')
+        }
+
+    </script>
+</body>
+</html>

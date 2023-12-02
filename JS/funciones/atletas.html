@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atletas</title>
+</head>
+<body>
+    <script>
+        const record=(n1,n2,n3,m1,m2,m3,ganador)=>{
+            if(m1>ganador||m2>ganador||m3>ganador){if (m1>15.50){
+                ganador=n1
+            }else if(m2>15.50){
+                ganador=n2
+            }else if(m3>15.50){
+                ganador=n3}
+            return ganador
+            }else{return null}
+            
+        }
+        const elegircampeon=(n1,n2,n3,m1,m2,m3)=>{
+            let ganador;
+            if(record(n1,n2,n3,m1,m2,m3,ganador)!==null){
+                return ganador
+            }else{
+                if (m1<m2 && m2<m3){
+                    ganador=n2
+                }else if (m2<m3 && m3>m1){
+                    ganador=n3
+                }
+                return ganador
+            }
+        }
+        let n1=prompt('Ingrese el nombre del atleta N1')
+        let m1=Number(prompt(`Ingrese la marca del atleta ${n1}`))
+        let n2=prompt('Ingrese el nombre del atleta N2')
+        let m2=Number(prompt(`Ingrese la marca del atleta ${n2}`))
+        let n3=prompt('Ingrese el nombre del atleta N3')
+        let m3=Number(prompt(`Ingrese la marca del atleta ${n3}`))
+        alert(`El ganador es: ${elegircampeon(n1,n2,n3,m1,m2,m3)}`)
+
+    </script>
+</body>
+</html>

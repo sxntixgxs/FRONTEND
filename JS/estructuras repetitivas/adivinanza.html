@@ -25,15 +25,16 @@
             alert('CORRECTO')
         }
         */
-
-       while(1<n<100){
-            if (n!==r){
-                n>r ? alert('El numero correcto es menor') : alert('El numero correcto es mayor')
-                continue
-            }else{
-                alert('correct')
-                break
-            }
+        do{
+            while(1<n<100){
+                    if (n!==r){
+                        n>r ? alert('El numero correcto es menor') : alert('El numero correcto es mayor')
+                        continue
+                    }else{
+                        alert('correct')
+                        break
+                    }
+            }while(let n = prompt('ingrese un numero'))
        }
     </script>
 </body>

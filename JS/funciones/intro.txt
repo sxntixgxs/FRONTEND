@@ -1,0 +1,23 @@
+debugger -> el ciclo de ejecucion de la pagina se para y se abre el depurador / debugger y aparece en que linea paró ! y lueugo está nlos botones para ir navegando pro el codigo; y muestra los valores que tienen las variables // aparte del console log esta el console.trace con la diferencia principal de que dice en que linea se llamó a ese elemento / variable 
+=========
+HAY VARIOS TIPOS:
+
+-Funciones declarativas/nombradas:
+    function nombreDeLaFuncion(parametro1,parametro2 ...){
+        cuerpo de la funcion
+        return valorDeRetorno
+    }
+``se hace con alt ggr y cerrar llave que esta debajo de borrar y encima de intro``
+-Funciones expresivas/anonimas:
+    const nombreDeLaFuncion = function(parametro1,parametro2,...){
+        cuerpo de la funcion
+        return valorDeRetorno
+        //obligatoriamente no debe tener un return
+    }
+-FUNCIONES FLECHA:
+   SON UNA FORMA DE HACER FUNCIONES D EUNA FORMA MAS CONCISA QUE UNA expresivas
+   const nombreDeLaFuncion (parametro1,parametro2)=>{
+        cuerpo de la funcion
+        return valorDeRetorno
+   }
+
