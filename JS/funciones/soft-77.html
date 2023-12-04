@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function leerNumero(msj){
+            let n;
+            let repita = false;
+            do {
+                repita=false
+                n=Number(prompt(msj))
+                if (n===0){nota=undefined;break;}
+                if (isNaN(n) || n<1){
+                    alert('Ingrese un numero valido > a 0.')
+                    repita=true
+                }
+            }while(repita)
+            return n;
+        }
+        nombre=prompt('Ingrese el nombre del producto')
+        precio=leerNumero('Ingrese el precio del producto')
+        cantidad=leerNumero('Ingrese la cantidad del producto')
+        const calcularPrecio=(precio,cantidad)=>{
+            let pr=precio*cantidad
+            return pr
+        }
+        alert(`El valor de la compra es: ${calcularPrecio(precio,cantidad)}`)
+    </script>
+</body>
+</html>
