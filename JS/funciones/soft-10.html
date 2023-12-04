@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Introducir numeros</h1>
+    <hr>
+    <p>Estos son los numeros que ingresó: </p>
+    <div id="listnum"></div>
+    <script>
+        let str=" ";
+        let n;
+        do{
+             n= Number(prompt('Introduzca un numero'))
+             str+=`${n}/`
+        }while (n!==0)
+        const sumatoria=(lista)=>{
+            let sumatoriapr
+            lista.forEach(function (elemento){
+                sumatoria+=elemento
+                alert(sumatoria(str))
+                return sumatoriapr
+            });
+        }
+        document.getElementById("listnum").innerHTML = str
+    </script>
+</body>
+</html>
