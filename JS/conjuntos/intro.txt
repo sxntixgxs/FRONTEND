@@ -1,0 +1,14 @@
+SET
+    new Set()/ crea conjunto
+    add /
+    size / longitud del conjunto
+    has / busca si existe o no en el conjunto, devuelve true or false
+    ... 
+
+
+
+
+    const letras = new Set()/ crea;
+    //añadir valores
+    letras.add("a");
+    letras.add("b");

@@ -1,0 +1,12 @@
+BIDIMENSIONALES;
+    arrancan en 0,0 
+    accedemos a los elementos a traves de sus indices
+    let matriz = [ ["salmon","halibut"],
+                    ["coral","reef"]];
+    ...
+    let matriz = []
+    //dimensiones
+    let fils = 2, cols =2;
+    //crearlas
+    for (let i = 0; i < fils; i++)
+        matrix[i]e

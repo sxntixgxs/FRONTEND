@@ -1,0 +1,35 @@
+VECTORES Y MATRICES
+ que permiten acceder a diferentes elementos
+
+    sintaxis:
+        let arrayName = [valor1,valor2, ...,valor]
+        let arrayName = newArray();
+        ej:
+            let casa = ["1BHK","2BHK","3BHK","4BHK","5BHK]
+        ** si vamos a acceder a los elementos de la lista, se accede con el indice del elemento en orden 0 a n, -1 no va a devolver el ultimo de la lista. **
+            let house = ["1BHK",2500,"2BHK",5000,"RENT",True]
+        ** todos los arrays inician en 0
+RECORRER ARRAY:
+    let frutas = new Array("Pera","Manzana","Banano","Mandarina") 
+    for (let i = 0; i<frutas.length; i++){
+        console.log(frutas[i])
+    }
+metodos del ARRAY:
+    push / agrega al final
+    pop / elimina el ultimo y lo devuelve
+    shift / elimina el primero y lo devuelve
+    unshift / agrega al inicio
+    slice / devuelve una parte del array
+    concat / une dos arrays en un nuevo array
+    join / une los elementos con un patron es como el contrario split a una cadena
+    indexOf / devuelve el indice del primer elemento encontrado o -1 si no lo encuentra ! ! !
+    forEach / ejecuta una funcion para cada elemento del array
+    map / crea un nuevo array con los resultados de llamar a una funcion para cada elemento del array
+    filter / crea un nuevo array con los resultados que cumplan la condicion especificada
+    reduce / reduce el array a un ...
+**TO FIXED DEVUELVE LOS DECIMALES Q ELIJA value.toFixed(2)
+**siempre clonar los datos de entrada para no modificarlos durante el proceso; por ejemplo un array:
+    arraycopia=arrayentrada.slice()
+    array copia va a ser exactamente igual pero tienen dos posiciones en la memoria totalmente distintas
+    o concatenarlo a un array vacio
+    
