@@ -6,7 +6,7 @@
     <title>QUIZ 1</title>
 </head>
 <body>
-    <tbody id="tdatos">a</tbody>
+    <table id="tdatos"></table>
     <script>
         //tabla de amortizacion simple
         //entradas: valor del monto, valor interes anual, numero de pagos
@@ -99,8 +99,14 @@
         //crear imprimir tabla html
         const printTable=function(matriz){
             let tabla = ""
-            for (const fila of matriz) {
-                tabla+= `<tr><th>${fila[0]}</th><tr><td>${fila[1]}</td><td>${fila[2]}</td><td>${fila[3]}</td><td>${fila[4]}</td><td>${fila[5]}</td></tr>`
+            for(let i = 0;i<matriz[5].lenght;i++){
+                tabla+=`<tr><td>${matriz[i]}</td><td>
+                    ${matriz[i+1]}</td><td>
+                    ${matriz[i+2]}</td><td>
+                    ${matriz[i+3]}</td><td>
+                    ${matriz[i+4]}</td>
+                    <td>
+                    ${matriz[i+5]}</td></tr>`
             }
             return tabla
         }
