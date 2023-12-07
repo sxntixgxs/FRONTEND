@@ -1,0 +1,16 @@
+un objeto tiene atributos y metodos/acciones
+ej: funcion: parametros, cuerpo
+los objetos se declaran con llaves{} y cada parte del objeto se separan con comas ,
+cada propiedad o metodo se define con una clave y un valor que se separan con :
+
+propiedades; se asocian a una clave
+
+===
+METODOS: 
+se ke pueden incluir acciones
+
+===
+propiedad THIS
+hace referencia a una propiedad del objeto;
+mirar ejemplo
+

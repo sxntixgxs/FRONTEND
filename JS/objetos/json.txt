@@ -1,0 +1,8 @@
+para convertir un objerto a json
+se usa la libreria JSON.stringify
+
+
+ej: const cadenaJSON = JSON.stringify(persona);
+
+
+convertir json a objeto
