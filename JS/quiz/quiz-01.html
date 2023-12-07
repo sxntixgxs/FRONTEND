@@ -97,19 +97,23 @@
             return matrizDatos
         }
         //crear imprimir tabla html
-        const printTable=function(matriz){
-            let tabla = ""
-            for(let i = 0;i<matriz[5].lenght();i++){
-                tabla+=`<tr><td>${matriz[i]}</td><td>
-                    ${matriz[i+1]}</td><td>
-                    ${matriz[i+2]}</td><td>
-                    ${matriz[i+3]}</td><td>
-                    ${matriz[i+4]}</td>
-                    <td>
-                    ${matriz[i+5]}</td></tr>`
+        const printTable = function (matriz) {
+            let tabla = "<tr>";
+            for (let i = 0; i < matriz[0].length; i++) {
+                tabla += `<th>${matriz[0][i]}</th>`;
             }
-            return tabla
-        }
+            tabla += "</tr>";
+
+            for (let i = 1; i < matriz.length; i++) {
+                tabla += "<tr>";
+                for (let j = 0; j < matriz[i].length; j++) {
+                    tabla += `<td>${matriz[i][j]}</td>`;
+                }
+                tabla += "</tr>";
+            }
+
+            return tabla;
+        };
         let ejecutar=prompt('Para ejecutar escriba cualquier tecla: ')
         if (ejecutar!==null){
             let montoCredito=Number(prompt('Ingrese el monto del crédito: '))
