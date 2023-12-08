@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ 1</title>
+</head>
+<body>
+    <form action="" id="datos">
+        <label for="montoCredito">Ingrese el monto del crédito: </label>
+        <input type="text" name="montoCredito" id="montoCredito">
+        <br>
+        <label for="interesanual">Ingrese el % de interés anual: </label>
+        <input type="text" name="interesanual" id="interesanual">
+        <br>
+        <label for="numeropagos">Numero de pagos / cuotas:</label>
+        <input type="text" name="numeropagos" id="numeropagos">
+    </form>
+    <table id="tdatos"></table>
+    <script>
+        //tabla de amortizacion simple
+        //entradas: valor del monto, valor interes anual, numero de pagos
+        //calcular: valor total a pagar, valor cuota mensual, 
+
+        let valorPorPagar
+        let valorMensual
+        //calcular valor total a pagar:
+        const valorTotalAPagar = function (montoCredito,interesAnual){
+            let porcentajePrestamo = montoCredito * (interesAnual/100)
+            let resultado = porcentajePrestamo + montoCredito
+            return resultado
+        }
+        //calcular valor cuota mensual
+        const calcularCuotaMensual = function (montoCredito,interesAnual,numeroPagos){
+            let valorAPagar = valorTotalAPagar(montoCredito,interesAnual)
+            let valorCuotas = valorAPagar / numeroPagos
+            return valorCuotas
+        }
+        //crear columna mes
+        const crearColumnaMes = function(numeroPagos){
+            let lista=[]
+            for(let i=1;i!==(numeroPagos+1);i++){
+                lista.push(i)
+            }
+            return lista
+        }
+        //crear columna valor
+        const crearColumnaValor = function(montoCredito,valorCuotas,interesAnual,numeroPagos){
+            let lista=[montoCredito]
+            let resta = montoCredito / numeroPagos
+            for(let i=1;i!==(numeroPagos);i++){
+                montoCredito-=resta
+                lista.push(montoCredito)
+            } return lista
+        }
+        //crear columna valor total
+        const crearColumnaValorTotal = function(valorPorPagar,valorCuotas,numeroPagos){
+            let lista=[168000]
+            for(let i = 1; i !== (numeroPagos); i++){
+                valorPorPagar = valorPorPagar - (valorCuotas)
+                lista.push(valorPorPagar)
+            } return lista
+        }
+        //crear columna capital
+        const crearColumnaCapital = function(numeroPagos,montoCredito){
+            let lista=[]
+            const capital = montoCredito / numeroPagos
+            for(let i = 0;i!==(numeroPagos);i++){
+                lista.push(capital)
+            } lista.push(montoCredito)
+            return lista
+        }
+        //crear columna interes
+        const crearColumnaInteres = function(valorMensual,numeroPagos,montoCredito){
+            const interes = valorMensual - (montoCredito / numeroPagos)
+            let lista = []
+            for(let i = 0; i!==(numeroPagos);i++){
+                lista.push(interes)
+            }lista.push(interes*12)
+            return lista
+        }
+        //crear columna total
+        const crearColumnaTotal = function(valorCuotas,valorPorPagar,numeroPagos){
+            let lista = []
+            for(let i = 0; i !== (numeroPagos); i++){
+                lista.push(valorCuotas)
+            }lista.push(valorPorPagar)
+            return lista
+        }
+        //crear matriz de datos
+        const crearMatrizDatos = function (numeroPagos,montoCredito,valorPorPagar,valorCuotas,interesAnual){
+            let mes = ['mes']
+            let valor = ['valor']
+            let valorTotal = ['valor Total']
+            let capital = ['Capital']
+            let interes = ['Interes']
+            let total = ['Total']
+            //se añaden los datos
+            mes = mes.concat(crearColumnaMes(numeroPagos))
+            valor = valor.concat(crearColumnaValor(montoCredito,valorCuotas,interesAnual,numeroPagos))
+            valorTotal=valorTotal.concat(crearColumnaValorTotal(valorPorPagar,valorCuotas,numeroPagos))
+            capital=capital.concat(crearColumnaCapital(numeroPagos,montoCredito))
+            interes=interes.concat(crearColumnaInteres(valorMensual,numeroPagos,montoCredito))
+            total=total.concat(crearColumnaTotal(valorCuotas,valorPorPagar,numeroPagos))
+            const matrizDatos = [mes,valor,valorTotal,capital,interes,total]
+            console.table(matrizDatos)
+            return matrizDatos
+        }
+        //crear imprimir tabla html
+        const printTable = function (matriz) {
+            let tabla = "<tr>";
+            for (let i = 0; i < matriz[0].length; i++) {
+                tabla += `<th>${matriz[0][i]}</th>`;
+            }
+            tabla += "</tr>";
+
+            for (let i = 1; i < matriz.length; i++) {
+                tabla += "<tr>";
+                for (let j = 0; j < matriz[i].length; j++) {
+                    tabla += `<td>${matriz[i][j]}</td>`;
+                }
+                tabla += "</tr>";
+            }
+
+            return tabla;
+        };
+        if (ejecutar!==null){
+            const montoCredito = document.getElementById("")
+            let montoCredito=Number(prompt('Ingrese el monto del crédito: '))
+            let interesAnual=Number(prompt('Ingrese el valor del interes anual: '))
+            let numeroPagos=Number(prompt('Ingrese el numero de pagos: '))
+            valorPorPagar = valorTotalAPagar(montoCredito,interesAnual).toFixed(2)
+            valorMensual = calcularCuotaMensual(montoCredito,interesAnual,numeroPagos).toFixed(2)
+            console.log(`valor total: ${valorPorPagar}, valor mensual: ${valorMensual}`)
+            matriz=crearMatrizDatos(numeroPagos,montoCredito,valorPorPagar,valorMensual,interesAnual)
+            document.getElementById("tdatos").innerHTML = printTable(matriz)
+        }
+    </script>
+</body>
+</html>
