@@ -1,0 +1,4 @@
+
+objetct.assign(destino,fuente1,fuente2)
+
+uso operador ...

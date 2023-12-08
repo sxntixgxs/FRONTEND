@@ -6,3 +6,20 @@ ej: const cadenaJSON = JSON.stringify(persona);
 
 
 convertir json a objeto
+===
+arreglos json
+...
+=== 
+new FormData()
+    crea un objeto llamado formData; el objeto contiene los datos de todos los campos del formulario.
+    tiene varios metodos
+        append() permite agregar un nuevo llave valor
+        delete()
+        get() obtiene un elemento llave valor
+        getAll() obtiene todos los valroes llave valor del objet
+
+DESTRUCTURACION
+ es como un slice para los objetoS? ?  ? y para los arrays y para los conjuntos
+    por ejemplo // mirar ejemplo        
+    de una matriz
+        asigna los primeros dos elementos de la matriz nuemros a las variables numero 1 y numero 2
