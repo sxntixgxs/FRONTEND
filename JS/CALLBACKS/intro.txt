@@ -1,0 +1,60 @@
+callbacks,promesas,asyncs,threads
+ejecucion de tareas en segundo plano sin afectar la principal
+
+esto se llama asincronia ! y es un estandar actual
+
+el hilo principal, opera de manera sincrónica -ejecucion en orden / secuencia -;
+asincronia es que cierta parte del codigo corre en su propio hilo de ejecucion
+
+donde usar op asincronas, servidores, temporizadores, interacciones de usuario, lectura/escritura de archivods
+
+SOLICITUDES A SERVIDORES:
+    Cuando una aplicacion web necesita obtener datos de un servidor, etc; 
+    es decir no se puede parar el programa para recibir una informacion,
+    esta info deberia llegar por otro hilo de ejecucion
+
+temporizadores 
+Interaccione sde usuario; 
+...
+
+console.log("Inicio de la tarea");
+setTimeout(function(){
+  console.log("Tarea asincrona completada 2 segs despues",2000)
+})
+console.log("Tarea principal continua")
+Inicio de la tarea debugger eval code:1:9
+Tarea principal continua debugger eval code:5:9
+Tarea asincrona completada 2 segs despues
+
+LENGUAJE NO BLOQUEANTE
+    ENFOQUE EN LAS OPERACIONES ASINCRONAS...
+    node.js
+    erlang
+    go
+JD es un lenguaje bloqueante, no bloqueant
+
+Por defecto tareas asincronas:
+    Fecth a una URL
+    Play de un .mp3 con un new Audio
+    setTimeout()
+    Api a la identificacion de boz
+    Comunicion de la api ...
+
+Gestionar la asincronia
+    async/await mas facil
+
+
+callbackses una funcion que se pasa como argumento a otra funcion y se ejeecuta despues de que la ultima se haya completado}
+
+function myDisplayer(some){
+    console.log(some);
+}
+function myCalculator(num1,num2,myCallback)
+{    let sum = num1+num2
+    mycallback(sum)}
+    ...
+//para evitar errores 
+    solo usar CALLBACKS cuando sea necesario
+    escribir CALLBACKS claros
+    usar nombres de variables descriptivas
+    proporcionar documentacion de las callbacks debe ser clara y concisa    

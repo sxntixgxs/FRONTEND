@@ -1,0 +1,2 @@
+acepta como parametros/argumentos a otras funciones,
+esto permite un estilo de programacion mas flexible y funcional
