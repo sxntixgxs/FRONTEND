@@ -42,4 +42,4 @@ const getDatos = () => {
 
 getDatos()
     .then((datos) => {console.table(datos)})
-    .catch((err) => {console.err(message)})
+    .catch((err) => {console.error(err.message)})
