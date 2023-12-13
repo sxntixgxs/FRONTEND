@@ -1,0 +1,21 @@
+objetos que se marcan en ms;
+
+const ahora() = new Date();
+// hora actual con dia fecha, año hora, zona horaria
+
+si le quiero pasar la fecha ...
+//los meses inician en 0
+
+...
+
+// obtener valores
+
+se asignan con set y se obtienen con get
+
+ahora.getFullYear()
+...
+///DATE STRINGS
+conviertte la fecha a cadena
+now.toDateString()
+
+//Timestamps como herramienta para comparar fechas

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FECHAS JS</title>
+</head>
+<body>
+    <script>
+         const fechaPactada = prompt('Ingrese la fecha pactada en formato MONTH DAY YEAR')
+         const fechaEntrega  = prompt('Ingrese la fecha de entrega real MONTH DAY YEAR')
+        const fechaP = new Date(fechaPactada)
+        const fechaE = new Date(fechaEntrega)
+        console.log(`La fecha pactada es ${fechaP} y la fecha de entrega es ${fechaE}`)
+        const diff = fechaP - fechaE
+        console.log(diff)
+        if (diff<0){
+            const dayMS = (24*60*60*1000)//calculo un dia en MS
+            const convertDiff = (diff * -1)/(dayMS)//convertir ms a dias de diferencia
+            let multa;
+            alert('EL LIBRO SE ENTREGÓ DESPUES DE LA FECHA PACTADA ! ')
+            if (convertDiff<=3){
+                multa = 7000 * convertDiff
+                alert(`Debe pagar una multa de $${multa} por ${convertDiff} días de atraso.`)
+            }else{
+                multa = 10000
+                alert(`Debe pagar una multa de $${multa} por ${convertDiff} días de atraso y no podrá hacer un préstamo por 6 meses.`)
+            }
+        }else{alert('El libro se entregó en la fecha correspondiente! ')}
+    </script>
+</body>
+</html>
