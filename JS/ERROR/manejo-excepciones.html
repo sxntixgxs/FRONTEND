@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar CORREO</title>
+</head>
+<body>//no está bien; validar ! 
+    <script>
+        alert('REGISTRO!')
+        const email = prompt('Ingrese el correo electrónico correo@domain.us')
+        try{        
+            const partEmail = email.split("@")
+            const msj = 'Ingrese un correo electrónico válido correo@domain.us'
+            if (partEmail.length !== 1){
+                throw new Error(msj)
+            } else {
+                const point = partEmail[1].includes(".")
+                if (point !== true){
+                    throw new Error(msj)
+                }
+            }}catch(error){
+                console.error(`Se produjo un error // ${error.message}`
+                )
+            }
+
+    </script>
+</body>
+</html>

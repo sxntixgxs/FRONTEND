@@ -1,0 +1,13 @@
+pendiente;resuelta;rechazada
+
+es para programacion asincrona
+
+.then(resolve)//maneja la ejecucion exitosa de la promesa
+.catch(reject)//maneja el rechazo de una promesa
+.then(resolve,reject)//maneja ambos resultados
+.finally // ejecuta si o si, se resuelva o se rechaze
+
+miPromesa 
+    .then(resultado => {
+        console.log("La promesa se cumplio co nexito",resultado)
+    })

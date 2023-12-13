@@ -1,0 +1,28 @@
+EXCEPCIONES
+    interrupciones de la ejecucion prevista del codigo cuando algo salio algo mal en el codigo
+errores
+    intterrupcion no intencionada en la ejecucion del codigo
+
+LANZAR UNA EXCEPCION
+    throw 'myExcepcion'; //lanzo elijo selecciono que esto es una excepcion que luego puede ser capturada por el catch
+    throw true;
+    //ambas formas de enviar la excepcion
+
+TRY
+    sentencias que seran ejecutadas
+CATCH
+    sentencias para manejar cualquier excepcion
+    mostrar el error en consola y no detiene la ejecucion
+FINALLY
+    se ejecuta si o si, como despues de un catch, como si no ocurre la excepcion        
+try{
+    throw "Ninguno pasó el quiz"
+} catch (e){
+    console.log(e)
+}finally{
+    console.log('Esto se va a ejecutar si o si')
+}
+//Ninguno pasó el quiz
+//Esto se va a ejecutar si o si
+
+***parseFloat()***

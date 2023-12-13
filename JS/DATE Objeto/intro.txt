@@ -19,3 +19,5 @@ conviertte la fecha a cadena
 now.toDateString()
 
 //Timestamps como herramienta para comparar fechas
+
+//BUSCAR DATE FNS
