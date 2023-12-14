@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEMON</title>
+</head>
+<body>
+    <script>
+        async function getNombre(id){
+            const url =`https://pokeapi.co/api/v2/pokemon/${id}`
+            const respuesta = await fetch(url);
+            if (!respuesta.ok)
+                throw new Error("Ingrese un ID válido")  
+            const json = await respuesta.json();    
+            return json.name;
+        }
+        async function getImg(id){
+            const url =`https://pokeapi.co/api/v2/pokemon/${id}`
+            const respuesta = await fetch(url);
+            if (!respuesta.ok)
+                throw new Error("Ingrese un ID válido")  
+            const json = await respuesta.json();    
+            return json.sprites.front_default;
+        }
+        async function devuelveName(id){
+            try {
+                let name = await getNombre(id);
+                console.log(name);
+                return name
+            }catch(error){
+                console.error(error.message)
+            }
+        }
+        async function devuelveImg(id){
+            try{
+                let urlImg = await getImg(id);
+                console.log(urlImg);
+                return urlImg
+            }catch(error){
+                console.error(error.message)
+            }
+        }
+        //funciona, devuelve el nombre
+        
+
+        // (async function(id=prompt('Ingrese el ID 1-100')){
+        //     try {
+        //         let urlImg = await getImg(id);
+        //         console.log(urlImg);
+        //     }catch(error){
+        //         console.error(error.message)
+        //     }
+        // })()//funciona, da el link de la img
+        // //ejecutar 100 vecess
+        const ejecutar100 = () =>{
+            let tabla = []
+            let nombres = []
+            let ids = []
+            let imgs = []
+            let nom;
+            let idD;
+            let im;
+            for(let i=0; i<100;i++){
+                nom = devuelveName(i)
+                im = devuelveImg(i)
+                idD = i
+                let fila = [
+                    idD,nom,im
+                ]
+                tabla.push(fila)
+            }
+        }
+    </script>
+</body>
+</html>
