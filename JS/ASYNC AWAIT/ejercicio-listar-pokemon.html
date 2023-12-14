@@ -61,7 +61,7 @@
             let nom;
             let idD;
             let im;
-            for(let i=0; i<100;i++){
+            for(let i=0; i=100;i++){
                 nom = devuelveName(i)
                 im = devuelveImg(i)
                 idD = i
@@ -69,8 +69,11 @@
                     idD,nom,im
                 ]
                 tabla.push(fila)
-            }
+            }return tabla
         }
+        tabla = ejecutar100()
+        console.table(tabla)
+        
     </script>
 </body>
 </html>
