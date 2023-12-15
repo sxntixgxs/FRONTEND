@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POKEMON BATTLE</title>
+    <style>
+        *{
+            margin: 0 auto;
+
+        }
+        .pokepng{
+            box-sizing: border-box;
+            max-width: 15%;
+            max-height: 15%;
+        }
+    </style>
+</head>
+<body>
+    <h2>El club de la pelea pokemon</h2>
+    <div class="miPoke">
+        <button onclick="elegirPokemon(1)">Mi pokemon</button>
+        <div id="1img"></div>
+        <div id="1stats"></div>
+    </div>
+    <div class="cpuPoke">
+        <button>CPU Pokemon</button>
+        <div id="2img"></div>
+        <div id="2stats"></div>
+    </div>
+    <div class="fight"><button onclick="fight()">Fight</button></div>
+    <div class="winner">WINNER! </div>
+    <script>
+        //https://pokeapi.co/api/v2/pokemon/{id-pokemon}
+        //rango [1 – 806]
+        
+        //elegir pokemon
+        let pokeId;
+        let pokeUser=false;
+        console.log("El usuario ha seleccionado un pokemon: ",pokeUser)
+        async function elegirPokemon(id){
+            pokeId=Math.floor(Math.random(1,806)*1000)
+            const url = `https://pokeapi.co/api/v2/pokemon/${pokeId}`;
+            const respuesta = await fetch(url);
+
+            if (!respuesta.ok)
+                throw new Error(`Error. Pokemon ${pokeId} no existe`)
+            const json = await respuesta.json();    
+            const pokeName = json.forms[0].name;
+            const pokeImagen = json.sprites.other["official-artwork"]. front_default;
+            console.log(pokeName,pokeImagen)
+            let statsName = []
+            let statsValue = []
+            const pokeHpName = json.stats[0].stat.name
+            const pokeHpValue=json.stats[0].base_stat
+            const pokeAtName=json.stats[1].stat.name
+            const pokeAtValue = json.stats[1].base_stat
+            const pokeDefName=json.stats[2].stat.name
+            const pokeDefValue=json.stats[2].base_stat
+            const pokeSpeedName=json.stats[5].stat.name
+            const pokeSpeedValue=json.stats[5].base_stat
+            const pokeNameExp = "exp"
+            const pokeBaseExp = json.base_experience
+            statsName.push(pokeHpName,pokeAtName,pokeDefName,pokeSpeedName,pokeNameExp)
+            statsValue.push(pokeHpValue,pokeAtValue,pokeDefValue,pokeSpeedValue,pokeBaseExp)
+            document.getElementById(`${id}img`).innerHTML = `<img class="pokepng"src="${pokeImagen}"> <h3>${pokeName}</h3>`
+            document.getElementById(`${id}stats`).innerHTML = `<h4>${statsName[0]}: ${statsValue[0]}</h4><h4>${statsName[1]}: ${statsValue[1]}</h4><h4>${statsName[2]}: ${statsValue[2]}</h4><h4>${statsName[3]}: ${statsValue[3]}</h4><h4>${statsName[4]}: ${statsValue[4]}</h4>`
+            pokeUser = true;
+            console.log("El usuario ha seleccionado un pokemon: ",pokeUser)
+        }
+
+        async function fight(){
+            //verificamos si el usuario ha seleccionado pokemon
+            if(!pokeUser){
+                alert('Debe elegir un pokemon, da clic en MI POKEMON')
+            }else{
+                for(i=0;i<500;i++){
+                    pokeId=Math.floor(Math.random(1,806)*1000)
+                    const url = `https://pokeapi.co/api/v2/pokemon/${pokeId}`;
+                    const respuesta = await fetch(url);
+
+                    if (!respuesta.ok)
+                        throw new Error(`Error. Pokemon ${pokeId} no existe`)
+                    const json = await respuesta.json();
+                    const pokeImg=json.sprites.other["official-artwork"]. front_default;
+                    document.getElementById("2img").innerHTML=`<img class="pokepng" src="${pokeImg}">`
+                    new Promise((resolve)=>{
+                    setTimeout(()=>{resolve(elegirPokemon(2))},5000)
+                })
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
