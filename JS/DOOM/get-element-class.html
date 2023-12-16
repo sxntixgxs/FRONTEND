@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div class="miclase">Elemento 1</div>
+    <div class="miclase">Elemento 2</div>
+    <div class="miclase">Elemento 3</div>
+    <script>
+        let elementos = document.getElementsByClassName('miclase');
+
+        //iterando sobre los elementos seleccionados
+        console.table(elementos)
+        for (let i = 0;i<elementos.length;i++){
+            //haciendo algo con cada elemento, por ejemplo, cambiando su contenido
+            elementos[i].innerHTML = "Nuevo contenido para " + (i+1);
+        }
+    </script>
+</body>
+</html>

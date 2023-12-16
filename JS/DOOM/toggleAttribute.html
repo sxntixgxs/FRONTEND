@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo toggleAttribute</title>
+</head>
+<body>
+    <!--
+        metodo que se utiliza para agregar o eliminar un atributo?
+    -->
+    <div class="miElemento">Contenido del Elemento</div>
+    <script>
+        //Seleccionar el elemento
+        const miElemento = document.getElementById('miElemento');
+        //agregar o eliminar el atributo 'data-info' basado en su existencia actual
+        miElemento.toggleAttribute('data-info');
+        //Mostrar en la consola si el atributo 'data-info' está presente despues de la operacion
+        console.log('¿data-info presente?',miElemento.hasAttribute('data-info'));
+    </script>
+</body>
+</html>

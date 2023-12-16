@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll</title>
+    <style>
+        .resaltado{
+            color:red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!---selecciona todos los elemenytos con una clase css ? --->
+    <p class="resaltado">Este es mi primer parrafo</p>
+    <p class="resaltado">Este es mi segundo parrafo</p>
+    <p>este es el tercer parrafo</p>
+    <button onclick="cambiar()">Cambiar</button>
+    <script>
+        function cambiar(){        //Utilizando querySelectorAll para seleccionar ytodos los parrafos con la clase "resaltado"
+                const parrafosResaltados = document.querySelectorAll(".resaltado");
+                //Iterando sobre los elementos seleccionados y haciendo algo ocn cada uno
+                let fsize = 18;
+                parrafosResaltados.forEach(parrafo=>{
+                    parrafo.style.fontSize=`${fsize}px`;
+                    fsize +=10;
+                    
+                })}
+    </script>
+</body>
+</html>

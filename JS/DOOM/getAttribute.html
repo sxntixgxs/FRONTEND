@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo getAttribue</title>
+</head>
+<body>
+    <a id="miEnlace" href="<https://www.ejemplo.com>" target="_blank">Enlace de ejemplo</a>
+    <script>
+        //seleccionar el elemento
+        const enlace = document.getElementById('miEnlace');
+        //Obtener el valor del atributo 'href'
+        const url = enlace.getAttribue('href');
+        console.log("URL:",url);
+    </script>
+</body>
+</html>

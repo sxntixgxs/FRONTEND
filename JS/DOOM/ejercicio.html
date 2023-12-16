@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="" id="numeros">
+        <label for="num1">Numero 1 </label>
+        <input type="text" name="num1" id="num1">
+    </form>
+    <input type="submit" value="+" onclick="capturarForm()">
+    <script>
+        function capturarForm(){
+            const form = document.getElementById("numeros")
+            console.log(form)
+        }
+
+    </script>
+</body>
+</html>

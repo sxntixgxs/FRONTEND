@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo getAttributeNames</title>
+</head>
+<body>
+    <div class="resaltado" id="miElemento" data-info="informacionAdicional">Contenido del Elemento</div>
+    <script>
+        //seleccionar el elemento
+        const miElemtno = document.getElementById('miElemento');
+        //Obtener nombres de todos los atributos
+        const nombresDeAtributos = miElemento.getAttributesNames();
+        //Mostrar los nombres de los atributos en consola
+        console.table(nombresdeAtributos)
+    </script>
+</body>
+</html>
