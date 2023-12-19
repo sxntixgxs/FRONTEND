@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="parent">
+        <p>Hola a todos</p>
+        <p class="message">Hola, soy todo un camper</p>
+    </div>
+</div>
+<input type="text" id="new-message">
+<button id="change-message" onclick="cambiarMensaje()">Cambiar mensaje</button>
+
+<script>
+    function cambiarMensaje(){
+        const messageElement = document.querySelector(".message");
+        const newMessage = document.getElementById("new-message").value;
+
+        messageElement.textContent = newMessage;
+    }
+</script>
