@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio js doom</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            max-width: 30%;
+            margin: 0 auto;
+            margin-top: 30vh;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: larger;
+            font-weight: 100;
+        }
+        input{
+            padding-bottom: 5%;
+        }
+    </style>
+</head>
+<body>
+    <form id="Formulario">
+        <label for="gradosc">Grados Centigrados: </label>
+        <input type="text" id="gradosC" name="gradosC">
+
+        <label for="gradosf" id="gradosf">Grados Farenheit:</label>
+        <input type="text" id="gradosF" name="gradosF">
+        <input type="button" value="Calcular Farenheit" onclick="calcularf()">
+        <input type="button" value="Calcular Centigrados" onclick="calcularc()">
+    </form>
+    <script>
+        function calcularf(){
+            //obtenemos los valores del formulario
+            let gradosC = document.getElementById('gradosC').value;
+
+            let gradosPr = (gradosC * (9/5)) + 32;
+            gradosPr = Math.round(gradosPr);
+            console.log(gradosPr);
+        
+            let gradosF = document.getElementById('gradosF');
+            gradosF.value = gradosPr;
+            
+            gradosF.readOnly = true;
+            
+            alert('El resultado son ' + gradosPr + ' grados Farenheit');
+        }
+        function calcularc(){
+            //obtenemos los valores del formulario
+            let gradosF = document.getElementById('gradosF').value;
+
+            let gradosPr = ((gradosF-32)/(9/5));
+            gradosPr = Math.round(gradosPr);
+            console.log(gradosPr);
+            let gradosC = document.getElementById('gradosC')
+            gradosC.value = gradosPr;
+
+            gradosC.readOnly = true;
+            alert('El resultado son'+gradosPr+' grados Faarenheit');
+        }
+    </script>
+</body>
+</html>

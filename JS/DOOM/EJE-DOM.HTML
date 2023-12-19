@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario</title>
+</head>
+<body>
+  <form id="miFormulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <input type="button" value="Enviar" onclick="guardarDatos()">
+  </form>
+
+  <script>
+    function guardarDatos() {
+      // Obtener los valores de los campos del formulario
+      var nombre = document.getElementById('nombre').value;
+      var email = document.getElementById('email').value;
+
+      // Puedes hacer lo que quieras con las variables aquí
+      console.log('Nombre:', nombre);
+      console.log('Email:', email);
+    }
+  </script>
+</body>
+</html>
