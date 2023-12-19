@@ -1,0 +1,12 @@
+<div class="clase1 clase2" id="miElemento">Contenido del Elemento</div>
+
+<button onclick="agregarClase()">Agregar Clase</button>
+
+<script>
+    const agregarClase = () => {
+        const elemento = document.getElementById('miElemento');
+        elemento.classList.add('nuevaClase');
+    }
+</script>
+
+<!--Sirve por ejemplo para que al pinchar en una caja, se le aplique un estilo a x elemento o elementos!!! -->

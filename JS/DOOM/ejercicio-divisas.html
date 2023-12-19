@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio Divisas</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+            max-width: 15%;
+            margin: 0 auto;
+            margin-top: 40vh;
+        }
+    </style>
+</head>
+<body>
+    <form id="formulario">
+        <label for="euros">Euros: </label>
+        <input type="number" name="euros" id="euros">
+
+        <label for="dolares">Dolares: </label>
+        <input type="number" name="Dolares" id="Dolares">
+
+        <input type="button" value="Calcular" onclick="calcular()">
+
+    </form>
+    <script>
+        async function calcular(){
+            const url = "https://cdn.dinero.today/api/banxico_nivel.json";
+            const rta = await fetch(url);
+            if(!rta.ok)
+                throw new Error(`Error. DIVISA NO EXISTE. no existe`)
+            const json = await rta.json();
+            const valorDolar = json["rates"]["USD"]
+            let dolarAConvertir = document.getElementById('euros').value; 
+            console.log(valorDolar+'Valor del dolar de la API')
+            let valorPr = valorDolar * dolarAConvertir;
+            console.log(valorPr+'Valor operacion');
+            Dolares.value=valorPr;
+            Dolares.readOnly = true;
+            alert('El resultado son '+valorPr+' dolares por los '+dolarAConvertir+' euros')
+        }
+    </script>
+</body>
+</html>
