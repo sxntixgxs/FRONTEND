@@ -9,7 +9,7 @@
     <div class="container">
         <label for="nombre">Nombre:</label>
         <input type="text" name="nombre" id="nombre">
-        <button id="agregar" onclick="agregarYordenar()">Agregar y ordenar nombre</button>
+        <button id="agregar" onclick="agregarYordenar(listaNombres)">Agregar y ordenar nombre</button>
         <h2>Nombres Ordenados</h2><hr>
         <input type="text" name="ordenados" id="ordenados">
         <button id="limpiar" onclick="limpiar()">Limpiar</button>
@@ -21,10 +21,9 @@
                 const element = document.querySelector(".ordenados");
                 const nombreIngresado = document.getElementById("nombre").value;
                 console.log(nombreIngresado)
-                listaNombres.push(nombreIngresado)
-                
+                listaNombres.push(nombreIngresado)    
             }
-            
+            ordenados.innerHTML=listaNombres
         }
     </script>
 </body>
