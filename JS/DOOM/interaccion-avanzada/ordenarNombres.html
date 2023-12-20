@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ordenar Nombres</title>
+</head>
+<body>
+    <div class="container">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre">
+        <button id="agregar" onclick="agregarYordenar()">Agregar y ordenar nombre</button>
+        <h2>Nombres Ordenados</h2><hr>
+        <input type="text" name="ordenados" id="ordenados">
+        <button id="limpiar" onclick="limpiar()">Limpiar</button>
+    </div>
+    <script>
+        let listaNombres = []
+        function agregarYordenar(listaNombres){
+            ()=>{
+                const element = document.querySelector(".ordenados");
+                const nombreIngresado = document.getElementById("nombre").value;
+                console.log(nombreIngresado)
+                listaNombres.push(nombreIngresado)
+                
+            }
+            
+        }
+    </script>
+</body>
+</html>

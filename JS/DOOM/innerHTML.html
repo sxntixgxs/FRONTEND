@@ -8,6 +8,8 @@
 <button id="change-message" onclick="cambiarMensaje()">Cambiar mensaje</button>
 
 <button onclick="obtenerDiv()">Obtener nombre del elemento div</button>
+
+<button onclick="innerDiv()">Inner Div</button>
 <script>
     function cambiarMensaje(){
         const messageElement = document.querySelector(".message");
@@ -18,5 +20,9 @@
     function obtenerDiv(){
         const element = document.querySelector(".message");
         alert(element.nodeName)//sirve para sacar el nombre del nodo al cual hago referencia
+    }
+    function innerDiv(){
+        const element = document.querySelector(".container");
+        alert(element.innerHTML)//aqui sacxa todos los hijos del element container !
     }
 </script>
