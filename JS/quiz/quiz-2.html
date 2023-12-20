@@ -21,6 +21,7 @@
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: space-between;
+            flex-flow: column wrap;
             align-items: center;
             height: 100vh;
             margin: 0;
@@ -39,26 +40,31 @@
         .card:hover {
             transform: scale(1.05);
         }
+        section{
+            display: flex;
+        }
     </style>
 </head>
 
 <body>
     <h2>El club de la pelea pokemon</h2>
-    <div class="card">   
-        <div class="miPoke">
-            <button onclick="elegirPokemon(1)" class="nameCard">Mi pokemon</button>
-            <div id="1img"></div>
-            <div id="1stats"></div>
-        </div></div> 
-    <div class="card">
-            <div class="cpuPoke">
-                <h3 class="nameCard">CPU Pokemon</h3>
-                <div id="2img"></div>
-                <div id="2stats"></div>
+    <section>
+        <div class="card">   
+            <div class="miPoke">
+                <button onclick="elegirPokemon(1)" class="nameCard">Mi pokemon</button>
+                <div id="1img"></div>
+                <div id="1stats"></div>
+            </div></div> 
+        <div class="card">
+                <div class="cpuPoke">
+                    <h3 class="nameCard">CPU Pokemon</h3>
+                    <div id="2img"></div>
+                    <div id="2stats"></div>
+                </div>
             </div>
-        </div>
-    <div class="fight"><button onclick="fight()">Fight</button></div>
-    <div class="winner">WINNER! </div>
+        <div class="fight"><button onclick="fight()">Fight</button></div>
+        <div class="winner">WINNER! </div>
+    </section>
     <script>
         //https://pokeapi.co/api/v2/pokemon/{id-pokemon}
         //rango [1 – 806]
