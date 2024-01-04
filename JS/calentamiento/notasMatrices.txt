@@ -1,0 +1,27 @@
+
+Si la matriz es cuadrada, es decir, tiene el mismo número de filas y columnas, puedes simplificar el código para recorrer la diagonal principal de la siguiente manera:
+
+javascript
+Copy code
+function recorrerDiagonalPrincipal(matriz) {
+  const longitud = matriz.length;
+
+  for (let i = 0; i < longitud; i++) {
+    console.log(matriz[i][i]);
+  }
+}
+
+// Ejemplo de uso
+const matrizCuadrada = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+];
+
+recorrerDiagonalPrincipal(matrizCuadrada);
+Este código recorre la diagonal principal de una matriz cuadrada. Cada elemento matriz[i][i] corresponde a un elemento en la diagonal principal.
+
+
+
+
+
