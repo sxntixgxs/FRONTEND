@@ -12,3 +12,6 @@ function calcularDiagonal(matriz){
     if(diff<0) diff=-diff
     console.log(`The diagonal difference is ${diff}`)
 }
+
+// solucikon del profesor m=> Math.abs(m.reduce((p,c,i)=>p+=m[i][i]-m[i][m.length-i-1],0))
+//mirar reduce, recorre el array y devuelve un valor
