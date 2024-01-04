@@ -16,3 +16,17 @@ let projectCosts=[1,5,3,4,2]
 let target=2;
 projectEstimates(size,projectCosts,target)
 //revisar y hacer con forEach para que recorra todos los elementos hagan un recorrido
+// ----
+
+function costProjects(arr,tar,len){
+    let n_target = 0;
+    for(let i=0;i<len-1;i++){
+        for(let j=i+1;j<len;j++){
+            let dif = Math.abs(arr[i]-arr[j])
+            if(dif==tar){
+                n_target++;
+            }
+        }   
+    }
+}
+//esta es la solucionb analizarla!
