@@ -318,12 +318,20 @@ input{
         display: none;
     }
     ul{
-        justify-content:center;
+        justify-content:space-between;
         width: 100%;
     }
-    footer ul{
+    /* footer ul{
         margin-left: 0;
         padding-left: 0;
+        max-width: 100%  ;
     }
-
+    footer ul li{
+        max-width: 33%;
+        display: flex;
+        justify-content:space-between;
+    } */
+    footer ul{
+        border: 2px solid var(--purple);
+    }
 }
