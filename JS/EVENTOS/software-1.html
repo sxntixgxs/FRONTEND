@@ -1,0 +1,36 @@
+<head>
+    <style>
+        .oculto {
+            display: none
+        }
+
+        .visible {
+            display: block
+        }
+    </style>
+</head>
+
+<body>
+    <div class="oculto" id="ficha1">
+        Hola, soy el bloque 1</div>
+    <div class="oculto" id="ficha2">
+        Hola, soy el bloque 2</div>
+    <div class="oculto" id="ficha3">
+        Hola, soy el bloque 3</div>
+    <script>
+        function showDiv(id){
+            const fichaOn=document.getElementById(id)
+            fichaOn.setAttribute('class','visible')
+        }
+        function validarKey(e){
+            let pr="";
+            "1"===e ? pr="ficha1":pr;
+            "2"===e ? pr="ficha2":pr;
+            "3"===e ? pr="ficha3":pr;
+            pr==="ficha1"||"ficha2"||"ficha3" ? showDiv(pr): pr
+        }
+        document.addEventListener('keydown',function(event){
+            validarKey(event.key)
+        })
+    </script>
+</body>
