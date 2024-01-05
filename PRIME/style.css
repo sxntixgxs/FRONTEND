@@ -139,13 +139,19 @@ input{
 }
 /*960 a 1328 pc*/
 @media (min-width:960px){
-
+    body{
+        max-width: 960px;
+    }
     .readm{
         color: var(--purple);
     }
     .art{
         display: grid;
+        /* border: 1px solid tomato; */
     }
+    /* .grid-item{
+        border: 1px solid tomato;
+    } */
     .item1{
         grid-area: 1/1;
     }
@@ -171,6 +177,7 @@ input{
         border-radius: 3px;
         display: flex;
         justify-content: space-between;
+        font-size: medium;
     }
     .hiddentext {
         position: absolute;
@@ -257,14 +264,20 @@ input{
     nav{
         max-height: 15rem;
         min-width: 200px;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         text-align: left;
+        margin-left: 0;
         justify-content: flex-start;
     }
     nav input{
         max-width: 100%;
         height: fit-content;
+    }
+    .searchbar{
+        display: flex;
+        margin: 0 auto;
     }
     form{
         margin-bottom: 0;
