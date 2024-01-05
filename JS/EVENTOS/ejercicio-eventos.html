@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de eventos</title>
+</head>
+<body>
+    <h1>Ejemplos de eventos</h1>
+    <p id="texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint laborum deleniti in? Velit consectetur aperiam rerum excepturi doloremque quam numquam tenetur facere alias, esse asperiores magnam fugiat architecto eligendi laboriosam?</p>
+    <script>
+        let texto = document.getElementById("texto");
+        let count = 0;
+        let originalTexto = texto.textContent;
+        function mostrarCount(){
+
+            count+=1
+            texto.textContent = `Ha pasado el mouse ${count} veces.`
+        }
+        function mostrarOriginal(){
+            texto.textContent = originalTexto
+        }
+        texto.addEventListener("mouseover",mostrarCount)
+        texto.addEventListener("mouseout",mostrarOriginal)
+//notas importantes ; usar addEventListener, las funciones se deben llamar sin los parentesis!!!!!
+    </script>
+</body>
+</html>

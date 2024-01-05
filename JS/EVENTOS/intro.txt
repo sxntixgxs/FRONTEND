@@ -14,4 +14,9 @@ Formas de trabajar con EVENTOS
     Mediante propiedades Js .onClick = func ...
     Mediante addEventListener
     --se recomienda .querySelector() desde el js por ejemplo para no usar el HTML
-    MIRAR ejemplo1.html
+    MIRAR ejemplo1.html 
+    y como podemos mejorarlo o implementar el .addEventListener()
+    MIRAR ejemplo1-mejorado.html
+
+ setAttribute //se asigna el evento y la funcion dinámicamente; los dods parametros que se le pasan son texto   
+    MIRAR ejemplo1-setAttribute

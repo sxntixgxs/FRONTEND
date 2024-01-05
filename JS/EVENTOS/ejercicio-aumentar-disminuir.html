@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aumentar Disminuir</title>
+    <style>
+        .container{
+            background-color: #fbbb04;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            /* ejex align-items ejey justify-content */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Ejemplo Eventos JS - Aumentar y Disminuir</h3>
+        <section>
+            <h2>Contador</h2>
+                <button id="aumentar">Aumentar</button>
+                <button id="disminuir">Disminuir</button>
+            <p id="texto">Contador: </p>
+        </section>
+    </div>    
+    <script>
+        let contNum=0;
+        let texto = document.getElementById("texto");
+        let aumentar = document.getElementById("aumentar");
+        let disminuir = document.getElementById("disminuir")
+        function aumentarCont(){
+            contNum+=1
+            texto.textContent = `Contador: ${contNum}`
+        }
+        function disminuirCont(){
+            contNum-=1
+            texto.textContent = `Contador: ${contNum}`
+        }
+        aumentar.addEventListener("click",aumentarCont)
+        disminuir.addEventListener("click",disminuirCont)
+    </script>
+</body>
+</html>
