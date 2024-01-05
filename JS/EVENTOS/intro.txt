@@ -1,0 +1,17 @@
+Cualquier accion que sucede en una página web y el navegador la puede reconocer
+Pueden ser generados por:
+    el usuario
+    hacer clic en un boton
+    mover el cursor
+    ...
+GESTION de EVENTOS
+
+addEventListener()
+
+Formas de trabajar con EVENTOS
+
+    Mediante atributos HTML <button onClick="..."></button>
+    Mediante propiedades Js .onClick = func ...
+    Mediante addEventListener
+    --se recomienda .querySelector() desde el js por ejemplo para no usar el HTML
+    MIRAR ejemplo1.html

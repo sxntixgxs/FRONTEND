@@ -1,0 +1,12 @@
+<button onClick="changeBackgroundColor()">Cambiar Color de Fondo</button>
+
+<script>
+
+    const letters = "0123456789ABCDEF"
+
+    const changeBackgroundColor = () =>
+        document.body.style.backgroundColor = getRandomColor();
+    
+    const getRandomColor = () => Array(6).fill("").reduce(
+        p => p += letters[Math.floor(Math.random() * 16)],"#");
+</script>
