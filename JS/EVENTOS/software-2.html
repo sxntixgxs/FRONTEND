@@ -1,0 +1,51 @@
+<head>
+    <style>
+        .colorCaja{
+            background-color: #71ff74;
+        }
+        .ingresa{
+            background-color:#feff64;
+        }
+        .recibe{
+            background-color: #9dd2fd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="centi">Grados centígrados: </label>
+        <input type="number" name="centi" id="centi" class="">
+        <label for="far">Grados Farenheit: </label>
+        <input type="number" name="far" id="far" class="">
+        <button id="send">Calcular</button>
+    </div>
+    <script>
+        let centiInput = document.getElementById("centi")
+        let farInput = document.getElementById("far")
+        let button = document.getElementById("send")
+        function calcularFar(gradosC,){
+            let pr=Math.floor(gradosC*(9/5)+32).toString()
+            farInput.value=pr
+            farInput.setAttribute("class","colorCaja")
+        }
+        function calcularCenti(gradosF){
+            let pr=Math.floor((gradosF-32)*(5/9)).toString()
+            centiInput.value=pr
+            centiInput.setAttribute("class","colorCaja")
+        }
+        function verificarVacio(){
+            centiInput.value !== "" ? calcularFar(farInput.value):calcularCenti(centiInput.value)
+        }
+        function cambiarColor1(){
+            centiInput.setAttribute("class","ingresa")
+            farInput.setAttribute("class","recibe")
+        }
+        function cambiarColor2(){
+            farInput.setAttribute("class","ingresa")
+            centiInput.setAttribute("class","recibe")g
+        }
+        button.addEventListener("click",verificarVacio)
+        centiInput.addEventListener("keydown",cambiarColor1)
+        farInput.addEventListener("keydown",cambiarColor2)
+    </script>
+</body>

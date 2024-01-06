@@ -3,27 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de eventos</title>
+    <title>Conversión de Grados</title>
+    <style>
+        /* Agrega estilos si es necesario */
+    </style>
 </head>
 <body>
-    <h1>Ejemplos de eventos</h1>
-    <p id="texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint laborum deleniti in? Velit consectetur aperiam rerum excepturi doloremque quam numquam tenetur facere alias, esse asperiores magnam fugiat architecto eligendi laboriosam?</p>
+    <div class="container">
+        <label for="centi">Grados centígrados: </label>
+        <input type="number" name="centi" id="centi">
+        <label for="far">Grados Fahrenheit: </label>
+        <input type="number" name="far" id="far">
+        <button id="send">Calcular</button>
+    </div>
+
     <script>
-        let texto = document.getElementById("texto");
-        let count = 0;
-        let originalText = texto.textContent; // Almacena el texto original
+        let centiInput = document.getElementById("centi");
+        let farInput = document.getElementById("far");
+        let button = document.getElementById("send");
 
-        function mostrarCount() {
-            count += 1;
-            texto.textContent = `Ha pasado el mouse ${count} veces.`;
+        function calcularFar(gradosC) {
+            let pr = Math.floor(gradosC * (9 / 5) + 32).toString();
+            farInput.value = pr;
         }
 
-        function restaurarTextoOriginal() {
-            texto.textContent = originalText;
+        function calcularCenti(gradosF) {
+            let pr = Math.floor((gradosF - 32) * (5 / 9)).toString();
+            centiInput.value = pr;
         }
 
-        texto.addEventListener("mouseover", mostrarCount);
-        texto.addEventListener("mouseout", restaurarTextoOriginal);
+        function verificarVacio() {
+            if (centiInput.value !== "") {
+                calcularFar(centiInput.value);
+            } else if (farInput.value !== "") {
+                calcularCenti(farInput.value);
+            }
+        }
+
+        button.addEventListener("click", verificarVacio);
     </script>
 </body>
 </html>
