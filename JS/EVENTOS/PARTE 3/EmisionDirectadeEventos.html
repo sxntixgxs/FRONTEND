@@ -1,0 +1,22 @@
+
+<div class="root">
+    <div class="parent">
+        <div class="child">
+            <button>presioname</button>
+        </div>
+    </div>
+</div>
+<script>
+    const root = document.querySelector(".root")
+    const button = document.querySelector("button");
+    button.addEventListener("click",()=>{
+        button.dispatchEvent(new CustomEvent("user:message",{
+            detail:{
+                name:"Computacion cuantica",
+            },
+            bubbles:true,
+        }))
+    })
+    root.addEventListener("user:message",event=>{const name = event.detail.name;
+    console.log(`Mensaje recibido de "${name}"`)})
+</script>
