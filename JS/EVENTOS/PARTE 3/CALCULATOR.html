@@ -1,127 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Calculator</title>
     <style>
-        body{
-            max-width: 100%;
-            max-height: 60%;
-            display: flex;
-            flex-direction: column;
-            justify-content:space-between;
-            align-items:center;
-            margin: 0 auto;
-            margin-top:20%;
-
-
-        }
-        #resultado{
-            background-color: black;
-            max-width: 100%;
-            color: white;
-        }
+      body {
+        max-width: 100%;
+        max-height: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 20%;
+      }
+      #resultado {
+        background-color: black;
+        max-width: 100%;
+        color: white;
+      }
     </style>
-</head>
-<body>  
+  </head>
+  <body>
     <section class="resultado">
-        <input type="text" name="resultado" id="resultado">
+      <input
+        type="text"
+        name="resultado"
+        id="resultado"
+      />
     </section>
     <section class="operaciones">
-        <button id="sumar">+</button>
-        <button id="restar">-</button>
-        <button id="multiplicar">*</button>
-        <button id="dividir">/</button>
-        <button id="decimal">.</button>
-        <button id="igual">=</button>
-        <button id="clear">C</button>
+      <button id="sumar">+</button>
+      <button id="restar">-</button>
+      <button id="multiplicar">*</button>
+      <button id="dividir">/</button>
+      <button id="decimal">.</button>
+      <button id="igual">=</button>
+      <button id="clear">C</button>
     </section>
     <section class="numeros">
-        <button id="0">0</button>
-        <button id="1">1</button>
-        <button id="2">2</button>
-        <button id="3">3</button>
-        <button id="4">4</button>
-        <button id="5">5</button>
-        <button id="6">6</button>
-        <button id="7">7</button>
-        <button id="8">8</button>
-        <button id="9">9</button>
+      <button id="0">0</button>
+      <button id="1">1</button>
+      <button id="2">2</button>
+      <button id="3">3</button>
+      <button id="4">4</button>
+      <button id="5">5</button>
+      <button id="6">6</button>
+      <button id="7">7</button>
+      <button id="8">8</button>
+      <button id="9">9</button>
     </section>
     <script>
-        //mostrar cada boton
-        let resultado = document.getElementById("resultado")
-        let suma = document.getElementById("sumar")
-        let restar = document.getElementById("restar")
-        let multiplicar = document.getElementById("multiplicar")
-        let dividir = document.getElementById("dividir")
-        let decimal = document.getElementById("decimal")
-        let igual = document.getElementById("igual")
-        let clear = document.getElementById("clear")
-        let cero = document.getElementById("0")
-        let uno = document.getElementById("1")
-        let dos = document.getElementById("2")
-        let tres = document.getElementById("3")
-        let cuatro = document.getElementById("4")
-        let cinco = document.getElementById("5")
-        let seis = document.getElementById("6")
-        let siete = document.getElementById("7")
-        let ocho = document.getElementById("8")
-        let nueve = document.getElementById("9")
-        function mostrar1(){
-            resultado.value="1"
-        }
-        function mostrar2(){
-            resultado.value="2"
-        }
-        function mostrar3(){
-            resultado.value="3"
-        }
-        function mostrar4(){
-            resultado.value="4"
-        }
-        function mostrar5(){
-            resultado.value="5"
-        }
-        function mostrar6(){
-            resultado.value="6"
-        }
-        function mostrar7(){
-            resultado.value="7"
-        }
-        function mostrar8(){
-            resultado.value="8"
-        }
-        function mostrar9(){
-            resultado.value="9"
-        }
-        function mostrar0(){
-            resultado.value="0"
-        }
-        function seguir(){
-            actual = resultado.value
+      //memoria ?
+      let currentValue = "";
 
+      //mostrar cada boton
+      let resultado = document.getElementById("resultado");
+      let suma = document.getElementById("sumar");
+      let restar = document.getElementById("restar");
+      let multiplicar = document.getElementById("multiplicar");
+      let dividir = document.getElementById("dividir");
+      let decimal = document.getElementById("decimal");
+      let igual = document.getElementById("igual");
+      let clear = document.getElementById("clear");
+      let cero = document.getElementById("0");
+      let uno = document.getElementById("1");
+      let dos = document.getElementById("2");
+      let tres = document.getElementById("3");
+      let cuatro = document.getElementById("4");
+      let cinco = document.getElementById("5");
+      let seis = document.getElementById("6");
+      let siete = document.getElementById("7");
+      let ocho = document.getElementById("8");
+      let nueve = document.getElementById("9");
+      function mostrar(num) {
+        if (num !== ".") {
+          currentValue += num;
+        } else {
+          currentValue.includes(num) === false
+            ? (currentValue += num)
+            : currentValue;
         }
-        function casodecimal(){
-            seguir()
-            resultado.value = `${actual}.`
-            seguir()
-
-        }
-        decimal.addEventListener("click",casodecimal)
-        uno.addEventListener("click",mostrar1)
-        dos.addEventListener("click",mostrar2)
-        tres.addEventListener("click",mostrar3)
-        cuatro.addEventListener("click",mostrar4)
-        cinco.addEventListener("click",mostrar5)
-        seis.addEventListener("click",mostrar6)
-        siete.addEventListener("click",mostrar7)
-        ocho.addEventListener("click",mostrar8)
-        nueve.addEventListener("click",mostrar9)
-        cero.addEventListener("click",mostrar0)
-
-
-    </script> 
-</body>
+        resultado.value = currentValue;
+      }
+      decimal.setAttribute("onclick", "mostrar('.')");
+      uno.setAttribute("onclick", "mostrar('1')");
+      dos.setAttribute("onclick", "mostrar('2')");
+      tres.setAttribute("onclick", "mostrar('3')");
+      cuatro.setAttribute("onclick", "mostrar('4')");
+      cinco.setAttribute("onclick", "mostrar('5')");
+      seis.setAttribute("onclick", "mostrar('6')");
+      siete.setAttribute("onclick", "mostrar('7')");
+      ocho.setAttribute("onclick", "mostrar('8')");
+      nueve.setAttribute("onclick", "mostrar('9')");
+      cero.setAttribute("onclick", "mostrar('0')");
+      clear.setAttribute("onclick", "clear()");
+    </script>
+  </body>
 </html>
