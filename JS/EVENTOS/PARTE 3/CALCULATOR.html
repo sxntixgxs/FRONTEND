@@ -23,6 +23,58 @@
         max-width: 100%;
         color: white;
       }
+      .numeros{
+        display: grid;
+        background-color: white;
+        margin: 0 auto;
+        gap: 4px;
+      }
+      .grid-item{
+        background-color: white;
+        border: 1px solid black;
+        padding: 20%;
+        min-width: 250px;
+        font-size: large;
+      }
+      .grid-item:hover{
+        background-color: gray;
+      }
+      .siete{
+        grid-area: 1/1/2/3;
+      }
+      .ocho{
+        grid-area: 1/4/2/6;
+      }
+      .nueve{
+        grid-area: 1/7/2/9;
+      }
+      .cuatro{
+        grid-area: 3/1/4/3;
+      }
+      .cinco{
+        grid-area: 3/4/4/6;
+      }
+      .seis{
+        grid-area: 3/7/4/9;
+      }
+      .uno{
+        grid-area: 5/1/6/3;
+      }
+      .dos{
+        grid-area: 5/4/6/6;
+      }
+      .tres{
+        grid-area: 5/7/6/9;
+      }
+      .cero{
+        grid-area: 7/1/8/3;
+      }
+      #decimal{
+        grid-area: 7/4/8/6;
+      }
+      #clear{
+        grid-area: 7/7/8/9;
+      }
     </style>
   </head>
   <body>
@@ -38,21 +90,23 @@
       <button id="restar">-</button>
       <button id="multiplicar">*</button>
       <button id="dividir">/</button>
-      <button id="decimal">.</button>
+
       <button id="igual">=</button>
-      <button id="clear">AC</button>  
+
     </section>
     <section class="numeros">
-      <button id="0">0</button>
-      <button id="1">1</button>
-      <button id="2">2</button>
-      <button id="3">3</button>
-      <button id="4">4</button>
-      <button id="5">5</button>
-      <button id="6">6</button>
-      <button id="7">7</button>
-      <button id="8">8</button>
-      <button id="9">9</button>
+      <button class="grid-item" id="decimal">.</button>
+      <button class="grid-item"id="clear">AC</button>  
+      <button class="grid-item cero" id="0">0</button>
+      <button class="grid-item uno" id="1">1</button>
+      <button class="grid-item dos" id="2">2</button>
+      <button class="grid-item tres" id="3">3</button>
+      <button class="grid-item cuatro" id="4">4</button>
+      <button class="grid-item cinco" id="5">5</button>
+      <button class="grid-item seis" id="6">6</button>
+      <button class="grid-item siete" id="7">7</button>
+      <button class="grid-item ocho" id="8">8</button>
+      <button class="grid-item nueve" id="9">9</button>
     </section>
     <script>
       //memoria ?
@@ -90,7 +144,27 @@
       }
       function clearf(){
         currentValue = ''
-        resultado.value=0
+        resultado.value=''
+      }
+      function almacenarMemoria(coso){
+        operationValue = currentValue + coso
+        clearf()
+      }
+      function calcular(){
+        if(operationValue!==''&&currentValue!==''){
+          let pr=eval(operationValue+currentValue)
+          console.log("valor pr"+pr)
+          console.log("pr type"+typeof pr)
+          pr=String(pr)
+          console.log("pr type"+typeof pr)
+          clearf()
+          currentValue=pr
+          resultado.value=currentValue
+
+        }
+      }
+      function inp(){
+        evaresultado.value
       }
       decimal.setAttribute("onclick", "mostrar('.')");
       uno.setAttribute("onclick", "mostrar('1')");
@@ -104,6 +178,12 @@
       nueve.setAttribute("onclick", "mostrar('9')");
       cero.setAttribute("onclick", "mostrar('0')");
       clear.setAttribute("onclick", "clearf()");
+      //operaciones
+      suma.setAttribute("onclick","almacenarMemoria('+')")
+      multiplicar.setAttribute("onclick","almacenarMemoria('*')")
+      dividir.setAttribute("onclick","almacenarMemoria('/')")
+      restar.setAttribute("onclick","almacenarMemoria('-')")
+      igual.setAttribute("onclick","calcular()")
     </script>
   </body>
 </html>
