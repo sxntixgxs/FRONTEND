@@ -1,0 +1,101 @@
+body {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-start;
+    margin: 0 auto;
+    margin-top: 10%;
+  }
+  .resultado{
+    display: flex;
+    margin: 0 auto;
+    padding-left: 0%;
+    padding-right: 0.3%;
+    align-items: center;
+    justify-content:start;
+    width: 52%;
+  }
+  #resultado {
+    background-color: black;
+    min-width: 100%;
+    color: white;
+    height: 100px;
+    font-size: 300%;
+  }
+  .keyboard{
+    display: grid;
+    background-color: white;
+    margin: 0 auto;
+    max-width: 1000px;
+    
+  }
+  .grid-item{
+    background-color: #FBFBFB;
+    border: 1px solid black;
+    padding: 20%;
+    font-size: 300%;
+    min-width: 250px;
+  }
+  .keyboard .grid-item:hover{
+    background-color: rgb(190, 233, 74);
+  }
+  .siete{
+    grid-area: 3/1/4/3;
+  }
+  .ocho{
+    grid-area: 3/4/4/6;
+  }
+  .nueve{
+    grid-area: 3/7/4/9;
+  }
+  .cuatro{
+    grid-area: 3/1/4/3;
+  }
+  .cinco{
+    grid-area: 3/4/4/6;
+  }
+  .seis{
+    grid-area: 3/7/4/9;
+  }
+  .uno{
+    grid-area: 5/1/6/3;
+  }
+  .dos{
+    grid-area: 5/4/6/6;
+  }
+  .tres{
+    grid-area: 5/7/6/9;
+  }
+  .cero{
+    grid-area: 7/1/8/3;
+  }
+  #decimal{
+    grid-area: 7/4/8/6;
+  }
+  #clear{
+    grid-area: 7/7/8/9;
+  }
+  .operaciones .grid-item{
+    background-color:#E7E7E6;
+  }
+  .sumar{
+    grid-area: 1/1/2/3;
+  }
+  .restar{
+    grid-area: 1/4/2/6;;
+  }
+  .multiplicar{
+    grid-area: 1/7/2/9;
+  }
+  .dividir{
+    grid-area: 1/10/2/12;
+  }
+  .igual{
+    grid-area: 3/10/9/12;
+    background-color: #F2785C;
+  }
+  .operaciones{
+    background-color: #EBEAE9;
+  }
