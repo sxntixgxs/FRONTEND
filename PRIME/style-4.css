@@ -68,6 +68,7 @@ article{
 }
 aside{
     grid-column: 5/6;
+    /* border: 1px solid tomato; */
 
 }
 h2{
@@ -76,6 +77,22 @@ h2{
 aside ul{
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    /* border: 1px solid yellow; */
+    padding-left: 0;
+}
+aside ul li{
+    /* border: 1px solid pink; */
+    max-width: 10rem;
+    margin: 0 auto;
+}
+.cover{
+    margin: 0 auto;
+    max-width: 10rem;
+}
+aside ul li p{
+    align-items: center;
+    justify-content: space-around;
 }
 span{
     color: var(--verde);
