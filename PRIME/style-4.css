@@ -13,35 +13,33 @@ body{
     width: 1200px;
     max-width: 1300px;
     margin: 0 auto;
-}
-.top{
-    width: 95em;
-    max-width: 95%;
-    height: 3em;
-    max-height: 5em;
-    border: 2px solid var(--purple);
+    text-align: justify;
     display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+    flex-direction: column;
+}
+
+nav{
+    width: 100%;
+    border: 2px solid var(--purple);
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
+}
+input{
+    width: 20rem;
+    background-color: white;
+    color: black;
+    border: 1px solid var(--purple);
+    border-radius: 3px;
+    margin-right: 3px;
+    height: 30px;
+    max-height: 3rem;
 }
 .actual{
     border: 3px solid var(--verde);
     border-radius: 5px;
     padding: 4px 6px 4px 6px;
-    font-weight: bold;
-    list-style: none;
-}
-header{
-    padding-bottom: none;
-    margin: none;
-    border: none;
-    border-radius: 10px;
-    border: 2px solid var(--verde);
-
-    text-align: center;
-    background-color: var(--verde);
 }
 h3, h3 a{
     margin-top: 0%;
@@ -65,6 +63,8 @@ h1{
 }
 article{
     grid-column: 1/4;
+    display: flex;
+    flex-direction: column;
 }
 aside{
     grid-column: 5/6;
@@ -169,6 +169,7 @@ footer{
     }
     .hidden{
         display:none;
+        visibility: hidden;
     }
     nav{
         width: 100%;
@@ -200,7 +201,7 @@ footer{
         flex-direction: column;
     }
     article img{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
     }
     aside ul{
@@ -218,26 +219,32 @@ footer{
 @media (max-width:480px){
     body{
         width: 400px;
+        display: flex;
+        flex-direction: column;
     }
     nav{
         max-height: 15rem;
-        min-width: 200px;
+        width:95%;
         display: flex;
         flex-direction: column;
         text-align: center;
+        margin-left: 2%;
     }
     nav input{
+        width:21rem;
         max-width: 100%;
         height: fit-content;
     }
     form{
         margin-bottom: 0;
     }
+    fieldset{
+        
+    }
     nav ul{
         text-align: center;
         margin-top: 0;
-        padding: 0;
-        display: flex;
+        display: inline;
     }
     .line3{
         display: flex;
@@ -254,12 +261,13 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin: 0;
     }
     h1{
         font-size: 220%;
     }
-    .art article img{
-        width: 250px;
+    article img{
+        width: 100%;
         margin-left: 15%;
     }
     .art img{
