@@ -1,11 +1,28 @@
 function leerTitl(i){
-
+    let url = `https://sxntixgxs.github.io/FRONTEND/datosPrime/db/desc.json`
+    fetch(url)
+    .then(response=>response.json())
+    .then(data=>{
+        let retorno = '';
+        let albumSoli = data.albums.find(album=>album.id===i)
+        retorno = albumSoli.titulo
+        return retorno
+    })
+    .catch(error=>console.error("Error",error))
 }
 
 function leerDesc(i){
     //debe leer el json y buscar la dsc del numero que se le esta pasando, y regresar la descripcion que coincida
-    let url = 
+    let url = `https://sxntixgxs.github.io/FRONTEND/datosPrime/db/desc.json`
     fetch(url)
+    .then(response=>response.json())
+    .then(data=>{
+        let retorno = '';
+        let albumSoli = data.albums.find(album=>album.id===i)
+        retorno = albumSoli.texto
+        return retorno
+    })
+    .catch(error=>console.error("Error",error))
 }
 export default function generarTarjeta(){
     const tarjeta = document.createElement("div");
@@ -19,7 +36,7 @@ export default function generarTarjeta(){
     while(i<7){
         tarjeta.classList.add("card")
         img.classList.add("album1")
-        img.src = `https://sxntixgxs.github.io/FRONTEND/PRIME/img/${i}.png`
+        img.src = `https://sxntixgxs.github.io/FRONTEND/datosPrime/img/${i}.png`
         titl.classList.add("titleAlbum")
         titl.textContent = leerTitl(i)
         desc.textContent = leerDesc(i)
