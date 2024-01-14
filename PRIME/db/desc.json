@@ -1,28 +1,34 @@
 {
-    "parrafos":[
+    "albums":[
         {
             "id":"1",
+            "titulo":"",
             "texto":""
         },
         {
             "id":"2",
+            "titulo":"",
             "texto":""
         },
         {
             "id":"3",
+            "titulo":"",
             "texto":""
         },
         {
             "id":"4",
+            "titulo":"",
             "texto":""
         },
         {
             "id":"5",
+            "titulo":"",
             "texto":""
         },
         {
             "id":"6",
+            "titulo":"",
             "texto":""
-        },
+        }
     ]
 }
