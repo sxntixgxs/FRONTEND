@@ -41,10 +41,10 @@ export default function generarTarjeta(){
         titl.textContent = leerTitl(i)
         desc.textContent = leerDesc(i)
         btn_stats.classList.add("btn_stats")
-        btn_stats.id("btn_stats")
+        btn_stats.id="btn_stats"
         btn_stats.textContent="SHOW CHARTS"
         btn_vote.classList.add("btn_vote")
-        btn_vote.id("btn_vote")
+        btn_vote.id="btn_vote"
         btn_vote.textContent="VOTE"
         //ordenamos la estructura
         tarjeta.appendChild(img)
