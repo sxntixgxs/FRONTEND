@@ -4,7 +4,8 @@ function leerTitl(i){
 
 function leerDesc(i){
     //debe leer el json y buscar la dsc del numero que se le esta pasando, y regresar la descripcion que coincida
-    
+    let url = 
+    fetch(url)
 }
 export default function generarTarjeta(){
     const tarjeta = document.createElement("div");
