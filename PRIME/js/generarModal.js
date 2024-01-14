@@ -10,8 +10,8 @@ function generarTarjeta(){
     while(i<7){
         tarjeta.classList.add("card")
         img.classList.add("album1")
-        img.src = 
-
+        img.src = `https://sxntixgxs.github.io/FRONTEND/PRIME/img/${i}.png`
+        desc.textContent = 
 
 
         i++
