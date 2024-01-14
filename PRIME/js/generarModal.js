@@ -1,4 +1,7 @@
 
+function leerDesc(i){
+
+}
 function generarTarjeta(){
     const tarjeta = document.createElement("div");
     const img = document.createElement("img");
@@ -11,8 +14,11 @@ function generarTarjeta(){
         tarjeta.classList.add("card")
         img.classList.add("album1")
         img.src = `https://sxntixgxs.github.io/FRONTEND/PRIME/img/${i}.png`
-        desc.textContent = 
-
+        desc.textContent = leerDesc(i)
+        btn_stats.classList.add("btn_stats")
+        btn_stats.id("btn_stats")
+        btn_stats.classList.add("btn_vote")
+        btn_stats.id("btn_vote")
 
         i++
     }
