@@ -2,33 +2,33 @@
     "albums":[
         {
             "id":"1",
-            "titulo":"",
-            "texto":""
+            "titulo":"808s & Heartbreak",
+            "texto":"Kanye's emotional masterpiece blending heartbreak and innovation."
         },
         {
             "id":"2",
-            "titulo":"",
-            "texto":""
+            "titulo":"En Letras Mayúsculas",
+            "texto":"Alcolirykoz's bold 2007 debut, a lyrical journey"
         },
         {
             "id":"3",
-            "titulo":"",
-            "texto":""
+            "titulo":"Esmeraldas",
+            "texto":"Crudo Means Raw's 2020 album, raw and authentic"
         },
         {
             "id":"4",
-            "titulo":"",
-            "texto":""
+            "titulo":"Euphanasia",
+            "texto":"Buhodermia's 2020 release, an euphoric musical journey"
         },
         {
             "id":"5",
-            "titulo":"",
-            "texto":""
+            "titulo":"LO-POCALYPSE LOOPS",
+            "texto":" A 2022 release, an apocalyptic musical experience."
         },
         {
             "id":"6",
-            "titulo":"",
-            "texto":""
+            "titulo":"Servicios Ambulatorioz",
+            "texto":"2017's Ambulatory Services, a sonic exploration"
         }
     ]
 }
