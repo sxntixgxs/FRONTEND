@@ -1,4 +1,4 @@
-function calculate_stats(json){
+export function calculate_stats(json){
     let stats_names = [];
     let stats_values = [];
     //[Hp, Attack, Defense, Speed] 
@@ -13,7 +13,7 @@ function calculate_stats(json){
     let speed_value = json.stats[3].base_stat;
     stats_values.push(hp_value,attack_value,defense_value,speed_value);
     let exp = json.base_experience;
-    let stats = {names:stats_names,values:stats_values,experience:exp};
+    let stats = [stats_names,stats_values,exp];//mejor manejo así que con Object
     return stats
 }
 
