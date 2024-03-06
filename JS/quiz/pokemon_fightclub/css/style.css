@@ -4,3 +4,12 @@
 .card .pokemon_img .my_poke_img{
     background-color: #e5e7eb;
 }
+
+.stats_custom{
+    background-color: white;
+}
+
+#stats_list{
+    background-color: white;
+}
+

@@ -8,31 +8,38 @@
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
-<body>
+<body class="flex flex-col justify-center items-center h-screen">
     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 uppercase tracking-wide">FIGHTCLUB</h1>
     <h2>Choose your character and <span>FIGHT!</span></h2>
-    <section class="card w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg p-4 flex flex-col items-center">
-        <div class="my_pokemon bg-white" id="my_pokemon">
-            <div id="my_pokemon_title_container"></div>
-            <div class="pokemon_img" class="w-5 h-5 bg-white">
-                <img src="" alt="" id="my_poke_img" class="bg-white block">
-            </div>
-            <div class="pokemon_stats">
-                <ul class="list-image-none" id="stats_list"></ul>
-            </div>
-            <div class="flex justify-center w-full mt-4 bg-white">
-                <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow content-between" id="choose_button">Choose your fighter</button>
-            </div>
+    <div class="cards_container flex gap-x-4">
+        <section class="card w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg p-4 flex flex-col items-center shadow-lg shadow-indigo-500/40">
+            <div class="my_pokemon bg-white" id="my_pokemon">
+                <div id="my_pokemon_title_container"></div>
+                <div class="pokemon_img" class="w-5 h-5 bg-white">
+                    <img src="" alt="" id="my_poke_img" class="bg-white block">
+                </div>
+                <div class="pokemon_stats">
+                    <ul class="list-image-none" id="stats_list"></ul>
+                </div>
+                <div class="flex justify-center w-full mt-4 bg-white">
+                    <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow content-between" id="choose_button">Choose your fighter</button>
+                </div>
 
-        </div>
-    </section>
-    <section class="card">
-        <div class="cpu_pokemon">
-            <div class="pokemon_img"></div>
-            <div class="pokemon_stats"></div>
-        </div>
-    </section>
-    <div class="fight_container"><button class="fight_button bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow">FIGHT</button></div>
+            </div>
+        </section>
+        <section class="card" id="card_cpu">
+            <div class="cpu_pokemon">
+                <div class="cpu_title_container"></div>
+                <div class="pokemon_img">
+                    <img src="" alt="" class="bg-white block" id="cpu_poke_img">
+                </div>
+                <div class="pokemon_stats">
+                    <ul class="list-image-none" id="stats_list_cpu"></ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="fight_container"><button class="fight_button bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded shadow" id="fight_button">FIGHT</button></div>
     <script type="module" src="./js/user/choose_fighter.js"></script>
 </body>
 </html>
